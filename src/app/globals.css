@@ -1,0 +1,214 @@
+/* src/app/globals.css */
+/* CRITICAL: Google Fonts @import MUST be first. Tailwind v4 enforces this. */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #06030f;
+  --color-surface: #0e0820;
+  --color-surface-2: #160d2e;
+  --color-border: rgba(168, 85, 247, 0.15);
+  --color-border-gold: rgba(240, 184, 74, 0.15);
+  --color-accent: #a855f7;
+  --color-accent-dim: rgba(168, 85, 247, 0.2);
+  --color-accent-glow: rgba(168, 85, 247, 0.4);
+  --color-gold: #f0b84a;
+  --color-gold-dim: rgba(240, 184, 74, 0.2);
+  --color-gold-glow: rgba(240, 184, 74, 0.4);
+  --color-text: #f0eaf8;
+  --color-text-muted: #9d8eb5;
+  --color-text-faint: #5a4f6e;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scan: scan 4s linear infinite;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-orbit: orbit 8s linear infinite;
+  --animate-blink: blink 1.2s step-end infinite;
+  --animate-marquee: marquee 28s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes scan {
+  0% { top: -2px; }
+  100% { top: 100%; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(168, 85, 247, 0.4); }
+  50% { box-shadow: 0 0 24px rgba(168, 85, 247, 0.4), 0 0 48px rgba(168, 85, 247, 0.2); }
+}
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(52px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(52px) rotate(-360deg); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+:root {
+  --bg: #06030f;
+  --surface: #0e0820;
+  --surface-2: #160d2e;
+  --accent: #a855f7;
+  --accent-dim: rgba(168, 85, 247, 0.2);
+  --accent-glow: rgba(168, 85, 247, 0.4);
+  --gold: #f0b84a;
+  --gold-dim: rgba(240, 184, 74, 0.2);
+  --gold-glow: rgba(240, 184, 74, 0.4);
+  --border: rgba(168, 85, 247, 0.15);
+  --border-gold: rgba(240, 184, 74, 0.15);
+  --text: #f0eaf8;
+  --text-muted: #9d8eb5;
+  --text-faint: #5a4f6e;
+  --section-px: 2.5rem;
+  --section-py: 5rem;
+  --nav-h: 72px;
+}
+
+.light {
+  --bg: #f5f0ff;
+  --surface: #ede4ff;
+  --surface-2: #e3d5ff;
+  --accent: #7c22d4;
+  --accent-dim: rgba(124, 34, 212, 0.15);
+  --accent-glow: rgba(124, 34, 212, 0.3);
+  --gold: #b37a00;
+  --gold-dim: rgba(179, 122, 0, 0.15);
+  --gold-glow: rgba(179, 122, 0, 0.3);
+  --border: rgba(124, 34, 212, 0.18);
+  --border-gold: rgba(179, 122, 0, 0.18);
+  --text: #1a0a2e;
+  --text-muted: #5a3d7a;
+  --text-faint: #9b7fc0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100dvh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.2), transparent);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body > * { position: relative; z-index: 2; }
+[id] { scroll-margin-top: 80px; }
+
+.section-pad { padding: var(--section-py) var(--section-px); }
+
+@media (max-width: 768px) {
+  :root { --section-px: 1.25rem; --section-py: 3.5rem; }
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1.2s step-end infinite;
+  color: var(--accent);
+  margin-left: 2px;
+}
+
+.glow-border {
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-border:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.glow-border-gold {
+  border: 1px solid var(--border-gold);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-border-gold:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius: 9999px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.skill-fill.animate { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  nav, footer, body::before, body::after { display: none !important; }
+  body { background: white; color: black; }
+}
+
+@media (pointer: fine) {
+  * { cursor: none !important; }
+}
