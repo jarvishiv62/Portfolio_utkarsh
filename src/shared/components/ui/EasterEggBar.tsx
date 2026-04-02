@@ -5,37 +5,41 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const KONAMI = [
-  "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
-  "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
-  "b","a"
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a",
 ];
 
 export function EasterEggBar() {
   const [triggered, setTriggered] = useState(false);
-  const [keys, setKeys] = useState<string[]>([]);
+  const [keys, setKeys] = useState<string[]>([]); // eslint-disable-line @typescript-eslint/no-unused-vars
 
   useEffect(() => {
     // console easter egg — fires once on mount
     console.log(
       "%c devport_2 v2.0 — utkarsh maurya ",
-      "background: #a855f7; color: white; font-size: 14px; font-weight: bold; padding: 4px 8px; border-radius: 4px;"
+      "background: #a855f7; color: white; font-size: 14px; font-weight: bold; padding: 4px 8px; border-radius: 4px;",
     );
     console.log(
       "%c built with Next.js 15 + motion/react + way too much caffeine",
-      "color: #f0b84a; font-size: 11px;"
+      "color: #f0b84a; font-size: 11px;",
     );
     console.log(
       "%c you opened devtools. respect. the code is clean — on purpose.",
-      "color: #9d8eb5; font-size: 11px;"
+      "color: #9d8eb5; font-size: 11px;",
     );
     console.log(
       "%c hiring? → virmauryauttu@gmail.com",
-      "color: #a855f7; font-size: 11px; font-weight: bold;"
+      "color: #a855f7; font-size: 11px; font-weight: bold;",
     );
-    console.log(
-      "%c hint: try ↑↑↓↓←→←→BA",
-      "color: #5a4f6e; font-size: 10px;"
-    );
+    console.log("%c hint: try ↑↑↓↓←→←→BA", "color: #5a4f6e; font-size: 10px;");
     console.log("%c 42", "color: #f0b84a; font-size: 10px;");
   }, []);
 

@@ -6,7 +6,7 @@ import { FadeIn } from "@/shared/components/ui/FadeIn";
 import { SectionHeader } from "@/shared/components/ui/SectionHeader";
 import { RobotSVG } from "@/shared/components/ui/Svgs";
 import { CHATBOT_SUGGESTIONS } from "@/shared/lib/content";
-import { createMessage, generateId, sleep } from "@/shared/lib/utils";
+import { createMessage, sleep } from "@/shared/lib/utils";
 import type { ChatMessage, ChatbotState } from "@/shared/types";
 
 const INTRO: ChatMessage = {
@@ -49,7 +49,10 @@ export function ChatbotSection() {
     setStatus("thinking");
 
     // scroll to bottom
-    setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), 50);
+    setTimeout(
+      () => bottomRef.current?.scrollIntoView({ behavior: "smooth" }),
+      50,
+    );
 
     try {
       await sleep(600 + Math.random() * 600);
@@ -64,12 +67,18 @@ export function ChatbotSection() {
     } catch {
       setMessages((p) => [
         ...p,
-        createMessage("assistant", "API's not responding rn. classic. email him at virmauryauttu@gmail.com"),
+        createMessage(
+          "assistant",
+          "API's not responding rn. classic. email him at virmauryauttu@gmail.com",
+        ),
       ]);
     } finally {
       setStatus("done");
       setTimeout(() => setStatus("idle"), 300);
-      setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), 80);
+      setTimeout(
+        () => bottomRef.current?.scrollIntoView({ behavior: "smooth" }),
+        80,
+      );
     }
   }
 
@@ -80,11 +89,18 @@ export function ChatbotSection() {
           {/* chat window */}
           <div>
             <FadeIn>
-              <SectionHeader label="// utkarsh_ai.exe" title="ask me anything" />
+              <SectionHeader
+                label="// utkarsh_ai.exe"
+                title="ask me anything"
+              />
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="mt-3 mb-6 text-sm" style={{ color: "var(--text-muted)" }}>
-                rule-based for now. swap in Anthropic SDK when the API key lands.
+              <p
+                className="mt-3 mb-6 text-sm"
+                style={{ color: "var(--text-muted)" }}
+              >
+                rule-based for now. swap in Anthropic SDK when the API key
+                lands.
               </p>
             </FadeIn>
 
@@ -92,21 +108,39 @@ export function ChatbotSection() {
               {/* terminal chrome */}
               <div
                 className="rounded-2xl overflow-hidden"
-                style={{ border: "1px solid var(--border)", background: "var(--surface)" }}
+                style={{
+                  border: "1px solid var(--border)",
+                  background: "var(--surface)",
+                }}
               >
                 {/* title bar */}
                 <div
                   className="flex items-center justify-between px-4 py-2.5"
-                  style={{ background: "var(--surface-2)", borderBottom: "1px solid var(--border)" }}
+                  style={{
+                    background: "var(--surface-2)",
+                    borderBottom: "1px solid var(--border)",
+                  }}
                 >
                   <div className="flex items-center gap-1.5" aria-hidden="true">
-                    <span className="w-3 h-3 rounded-full" style={{ background: "#ff5f56" }} />
-                    <span className="w-3 h-3 rounded-full" style={{ background: "#ffbd2e" }} />
-                    <span className="w-3 h-3 rounded-full" style={{ background: "var(--accent)" }} />
+                    <span
+                      className="w-3 h-3 rounded-full"
+                      style={{ background: "#ff5f56" }}
+                    />
+                    <span
+                      className="w-3 h-3 rounded-full"
+                      style={{ background: "#ffbd2e" }}
+                    />
+                    <span
+                      className="w-3 h-3 rounded-full"
+                      style={{ background: "var(--accent)" }}
+                    />
                   </div>
                   <span
                     className="text-xs font-mono"
-                    style={{ color: "var(--text-faint)", fontFamily: "var(--font-mono)" }}
+                    style={{
+                      color: "var(--text-faint)",
+                      fontFamily: "var(--font-mono)",
+                    }}
                   >
                     utkarsh_ai.exe — ask anything
                   </span>
@@ -214,7 +248,8 @@ export function ChatbotSection() {
                     disabled={!input.trim() || status === "thinking"}
                     className="px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 disabled:opacity-40"
                     style={{
-                      background: "linear-gradient(135deg, var(--accent), var(--gold))",
+                      background:
+                        "linear-gradient(135deg, var(--accent), var(--gold))",
                       color: "white",
                       fontFamily: "var(--font-display)",
                     }}
@@ -229,10 +264,16 @@ export function ChatbotSection() {
           {/* robot SVG sidebar */}
           <div className="hidden lg:flex flex-col items-center gap-4 sticky top-24">
             <FadeIn direction="right" delay={0.3}>
-              <RobotSVG className="w-48 h-60" style={{ animation: "float 6s ease-in-out infinite" }} />
+              <RobotSVG
+                className="w-48 h-60"
+                style={{ animation: "float 6s ease-in-out infinite" }}
+              />
               <p
                 className="text-center text-xs font-mono mt-2"
-                style={{ color: "var(--text-faint)", fontFamily: "var(--font-mono)" }}
+                style={{
+                  color: "var(--text-faint)",
+                  fontFamily: "var(--font-mono)",
+                }}
               >
                 {/* not GPT. not Claude. just vibes + a switch statement. */}
               </p>

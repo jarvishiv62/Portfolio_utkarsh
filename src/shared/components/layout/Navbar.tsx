@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 import { useActiveSection } from "@/shared/hooks/useActiveSection";
-import { NAV_LINKS, SITE_NAME } from "@/shared/lib/content";
+import { NAV_LINKS } from "@/shared/lib/content";
 import { ThemeToggle } from "@/shared/components/ui/ThemeToggle";
 import { cn } from "@/shared/lib/utils";
 
@@ -29,7 +29,10 @@ export function Navbar() {
           <Link
             href="/"
             className="font-bold text-lg tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--accent)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--accent)",
+            }}
           >
             <span style={{ color: "var(--text-faint)" }}>_</span>utkarsh
             <span style={{ color: "var(--gold)" }}>.</span>
@@ -46,7 +49,7 @@ export function Navbar() {
                     href={href}
                     className={cn(
                       "relative px-3 py-1.5 text-sm font-mono rounded-lg transition-colors duration-200",
-                      "hover:text-[var(--accent)]"
+                      "hover:text-[var(--accent)]",
                     )}
                     style={{
                       color: isActive ? "var(--accent)" : "var(--text-muted)",
@@ -59,7 +62,11 @@ export function Navbar() {
                         layoutId="nav-underline"
                         className="absolute bottom-0 left-3 right-3 h-[2px] rounded-full"
                         style={{ background: "var(--accent)" }}
-                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
                       />
                     )}
                   </Link>
@@ -76,7 +83,8 @@ export function Navbar() {
               href="#contact"
               className="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-sm font-bold transition-all duration-200 hover:opacity-90"
               style={{
-                background: "linear-gradient(135deg, var(--accent), var(--gold))",
+                background:
+                  "linear-gradient(135deg, var(--accent), var(--gold))",
                 color: "white",
                 fontFamily: "var(--font-display)",
               }}
@@ -132,7 +140,11 @@ export function Navbar() {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="fixed inset-x-0 z-40 md:hidden pt-[var(--nav-h)]"
-            style={{ top: 0, background: "rgba(6, 3, 15, 0.97)", backdropFilter: "blur(20px)" }}
+            style={{
+              top: 0,
+              background: "rgba(6, 3, 15, 0.97)",
+              backdropFilter: "blur(20px)",
+            }}
           >
             <ul className="flex flex-col p-6 gap-2">
               {NAV_LINKS.map(({ label, href }) => (
@@ -156,14 +168,23 @@ export function Navbar() {
                   href="#contact"
                   onClick={() => setOpen(false)}
                   className="flex-1 py-2.5 rounded-xl text-sm font-bold text-center"
-                  style={{ background: "linear-gradient(135deg, var(--accent), var(--gold))", color: "white", fontFamily: "var(--font-display)" }}
+                  style={{
+                    background:
+                      "linear-gradient(135deg, var(--accent), var(--gold))",
+                    color: "white",
+                    fontFamily: "var(--font-display)",
+                  }}
                 >
                   hire me
                 </a>
                 <a
-                  href="/resume.pdf" download
+                  href="/resume.pdf"
+                  download
                   className="flex-1 py-2.5 rounded-xl text-sm font-mono text-center"
-                  style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }}
+                  style={{
+                    border: "1px solid var(--border)",
+                    color: "var(--text-muted)",
+                  }}
                 >
                   ↓ resume
                 </a>

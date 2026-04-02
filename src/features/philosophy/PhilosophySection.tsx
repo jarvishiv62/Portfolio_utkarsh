@@ -19,7 +19,10 @@ export function PhilosophySection() {
 
           <div>
             <FadeIn>
-              <SectionHeader label="// philosophy" title="how i think about code" />
+              <SectionHeader
+                label="// philosophy"
+                title="how i think about code"
+              />
             </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
@@ -32,16 +35,21 @@ export function PhilosophySection() {
                       style={{
                         background: "var(--surface)",
                         border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,
-                        transition: "box-shadow 0.3s ease, border-color 0.3s ease",
+                        transition:
+                          "box-shadow 0.3s ease, border-color 0.3s ease",
                       }}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget as HTMLDivElement;
-                        el.style.borderColor = isGold ? "var(--gold)" : "var(--accent)";
+                        el.style.borderColor = isGold
+                          ? "var(--gold)"
+                          : "var(--accent)";
                         el.style.boxShadow = `0 0 24px ${isGold ? "var(--gold-glow)" : "var(--accent-glow)"}`;
                       }}
                       onMouseLeave={(e) => {
                         const el = e.currentTarget as HTMLDivElement;
-                        el.style.borderColor = isGold ? "var(--border-gold)" : "var(--border)";
+                        el.style.borderColor = isGold
+                          ? "var(--border-gold)"
+                          : "var(--border)";
                         el.style.boxShadow = "none";
                       }}
                     >
@@ -49,7 +57,9 @@ export function PhilosophySection() {
                         className="text-4xl font-black mb-3 leading-none select-none"
                         style={{
                           fontFamily: "var(--font-display)",
-                          color: isGold ? "var(--gold-dim)" : "var(--accent-dim)",
+                          color: isGold
+                            ? "var(--gold-dim)"
+                            : "var(--accent-dim)",
                         }}
                       >
                         {item.num}
@@ -63,7 +73,10 @@ export function PhilosophySection() {
                       >
                         {item.title}
                       </h3>
-                      <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                      <p
+                        className="text-sm leading-relaxed"
+                        style={{ color: "var(--text-muted)" }}
+                      >
                         {item.body}
                       </p>
                     </div>
@@ -83,18 +96,25 @@ export function PhilosophySection() {
               >
                 <div
                   className="absolute top-0 left-0 w-1 h-full rounded-l-2xl"
-                  style={{ background: "linear-gradient(to bottom, var(--accent), var(--gold))" }}
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, var(--accent), var(--gold))",
+                  }}
                 />
                 <blockquote className="pl-4">
                   <p
                     className="text-base italic leading-relaxed"
-                    style={{ color: "var(--text-muted)", fontFamily: "var(--font-display)" }}
+                    style={{
+                      color: "var(--text-muted)",
+                      fontFamily: "var(--font-display)",
+                    }}
                   >
-                    &ldquo;the difference between a senior and a junior isn&apos;t the language.
-                    it&apos;s knowing which problems to not solve.&rdquo;
+                    &ldquo;the difference between a senior and a junior
+                    isn&apos;t the language. it&apos;s knowing which problems to
+                    not solve.&rdquo;
                   </p>
                   <footer className="mt-2 label-mono">
-                    // something i try to remember before over-engineering
+                    {"// something i try to remember before over-engineering"}
                   </footer>
                 </blockquote>
               </div>

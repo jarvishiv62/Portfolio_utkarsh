@@ -5,10 +5,13 @@ import { useTypewriter } from "@/shared/hooks/useTypewriter";
 import { AnimatedCounter } from "@/shared/components/ui/AnimatedCounter";
 import { DevAvatarSVG, OrbitRingSVG } from "@/shared/components/ui/Svgs";
 import { HERO_STATS, TYPEWRITER_WORDS } from "@/shared/lib/content";
-import { SITE } from "@/shared/lib/metadata";
 
 export function HeroSection() {
-  const typed = useTypewriter({ words: TYPEWRITER_WORDS, speed: 75, deleteSpeed: 38 });
+  const typed = useTypewriter({
+    words: TYPEWRITER_WORDS,
+    speed: 75,
+    deleteSpeed: 38,
+  });
 
   return (
     <section
@@ -33,7 +36,11 @@ export function HeroSection() {
           >
             <span
               className="w-2 h-2 rounded-full"
-              style={{ background: "var(--accent)", boxShadow: "0 0 8px var(--accent-glow)", animation: "pulse-soft 3s ease-in-out infinite" }}
+              style={{
+                background: "var(--accent)",
+                boxShadow: "0 0 8px var(--accent-glow)",
+                animation: "pulse-soft 3s ease-in-out infinite",
+              }}
             />
             available for hire · graduating 2026
           </motion.div>
@@ -58,12 +65,18 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg sm:text-xl mb-6 font-mono min-h-[1.8em]"
-            style={{ fontFamily: "var(--font-mono)", color: "var(--text-muted)" }}
+            style={{
+              fontFamily: "var(--font-mono)",
+              color: "var(--text-muted)",
+            }}
           >
             <span>{typed}</span>
             <span
               className="inline-block w-[2px] h-[1.1em] ml-[2px] align-middle"
-              style={{ background: "var(--accent)", animation: "blink 1.2s step-end infinite" }}
+              style={{
+                background: "var(--accent)",
+                animation: "blink 1.2s step-end infinite",
+              }}
             />
           </motion.div>
 
@@ -75,8 +88,9 @@ export function HeroSection() {
             className="text-base leading-relaxed mb-8 max-w-lg"
             style={{ color: "var(--text-muted)" }}
           >
-            b.tech IT @ REC Bijnor, &apos;26. two real internships — not localhost projects.
-            built things with real clients, real deadlines, and a genuine fear of n+1 queries.
+            b.tech IT @ REC Bijnor, &apos;26. two real internships — not
+            localhost projects. built things with real clients, real deadlines,
+            and a genuine fear of n+1 queries.
           </motion.p>
 
           {/* CTAs */}
@@ -90,7 +104,8 @@ export function HeroSection() {
               href="#projects"
               className="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
               style={{
-                background: "linear-gradient(135deg, var(--accent), var(--gold))",
+                background:
+                  "linear-gradient(135deg, var(--accent), var(--gold))",
                 color: "white",
                 fontFamily: "var(--font-display)",
               }}
@@ -122,7 +137,10 @@ export function HeroSection() {
               <div key={stat.label}>
                 <div
                   className="text-2xl font-black font-mono"
-                  style={{ fontFamily: "var(--font-mono)", color: i % 2 === 0 ? "var(--accent)" : "var(--gold)" }}
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    color: i % 2 === 0 ? "var(--accent)" : "var(--gold)",
+                  }}
                 >
                   <AnimatedCounter
                     value={stat.value}
@@ -130,7 +148,10 @@ export function HeroSection() {
                     prefix={stat.prefix}
                   />
                 </div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--text-faint)" }}>
+                <div
+                  className="text-xs mt-0.5"
+                  style={{ color: "var(--text-faint)" }}
+                >
                   {stat.label}
                 </div>
               </div>
@@ -166,14 +187,20 @@ export function HeroSection() {
         transition={{ delay: 1.5, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-xs font-mono" style={{ color: "var(--text-faint)", fontFamily: "var(--font-mono)" }}>
+        <span
+          className="text-xs font-mono"
+          style={{ color: "var(--text-faint)", fontFamily: "var(--font-mono)" }}
+        >
           scroll
         </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-[1px] h-8"
-          style={{ background: "linear-gradient(to bottom, var(--accent), transparent)" }}
+          style={{
+            background:
+              "linear-gradient(to bottom, var(--accent), transparent)",
+          }}
         />
       </motion.div>
     </section>
