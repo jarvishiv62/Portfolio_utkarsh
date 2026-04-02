@@ -113,7 +113,7 @@ export function HeroSection() {
               see what i&apos;ve built →
             </a>
             <a
-              href="/resume.pdf"
+              href="/utkarsh_resume_L.pdf"
               download
               className="px-6 py-3 rounded-xl font-mono text-sm transition-all duration-200 hover:opacity-80"
               style={{

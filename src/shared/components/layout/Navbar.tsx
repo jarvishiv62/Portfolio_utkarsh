@@ -93,7 +93,7 @@ export function Navbar() {
             </a>
             {/* resume download */}
             <a
-              href="/resume.pdf"
+              href="/utkarsh_resume_L.pdf"
               download
               className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-mono transition-all duration-200"
               style={{
@@ -178,7 +178,7 @@ export function Navbar() {
                   hire me
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href="/utkarsh_resume_L.pdf"
                   download
                   className="flex-1 py-2.5 rounded-xl text-sm font-mono text-center"
                   style={{

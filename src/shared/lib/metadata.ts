@@ -9,7 +9,7 @@ export const SITE = {
     "Full-stack developer specializing in Laravel + Next.js. Shipped real products at two internships. Cut API response times by 30%. Looking for the next thing to build.",
   author: "Utkarsh Maurya",
   email: "virmauryauttu@gmail.com",
-  github: "https://github.com/utkarsh-maurya",
+  github: "https://github.com/jarvishiv62",
   linkedin: "https://linkedin.com/in/utkarsh-maurya",
 };
 
@@ -19,9 +19,7 @@ export function pageMeta(opts?: {
   path?: string;
   image?: string;
 }): Metadata {
-  const title = opts?.title
-    ? `${opts.title} — Utkarsh Maurya`
-    : SITE.title;
+  const title = opts?.title ? `${opts.title} — Utkarsh Maurya` : SITE.title;
   const description = opts?.description ?? SITE.description;
   const url = opts?.path ? `${SITE.url}${opts.path}` : SITE.url;
   const image = opts?.image ?? `${SITE.url}/opengraph-image`;
