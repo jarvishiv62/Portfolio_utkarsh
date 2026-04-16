@@ -6,7 +6,7 @@ import { ProjectsSection } from "@/features/projects/ProjectsSection";
 import { TestimonialsSection } from "@/features/testimonials/TestimonialsSection";
 import { PhilosophySection } from "@/features/philosophy/PhilosophySection";
 import { LearningSection } from "@/features/learning/LearningSection";
-import { ChatbotSection } from "@/features/chatbot/ChatbotSection";
+import FloatingChatbot from "@/features/chatbot/FloatingChatbot";
 import { ContactSection } from "@/features/contact/ContactSection";
 
 export default function HomePage() {
@@ -19,8 +19,8 @@ export default function HomePage() {
       <TestimonialsSection />
       <PhilosophySection />
       <LearningSection />
-      <ChatbotSection />
       <ContactSection />
+      <FloatingChatbot />
     </>
   );
 }
