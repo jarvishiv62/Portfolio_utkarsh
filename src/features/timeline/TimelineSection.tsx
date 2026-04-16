@@ -186,7 +186,7 @@ export function TimelineSection() {
       <div className="container-portfolio">
         <CinemaReveal>
           <CinemaChild>
-            <p className="section-label">// journey</p>
+            <p className="section-label">{"// journey"}</p>
           </CinemaChild>
           <CinemaChild>
             <div style={{ marginTop: "1.25rem", marginBottom: "4rem" }}>
