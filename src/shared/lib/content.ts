@@ -22,7 +22,7 @@ export const TYPEWRITER_WORDS = [
 
 export const NAV_LINKS = [
   { label: "about", href: "#about" },
-  { label: "experience", href: "#experience" },
+  { label: "journey", href: "#timeline" },
   { label: "projects", href: "#projects" },
   { label: "testimonials", href: "#testimonials" },
   { label: "chat", href: "#chatbot" },
@@ -86,7 +86,14 @@ export const PROJECTS: Project[] = [
     tagline: "9 features. one app. zero subscription fatigue.",
     year: "2024",
     status: "shipped",
-    stack: ["Laravel 12", "PHP 8.2", "MySQL", "Bootstrap", "PWA", "Artisan CLI"],
+    stack: [
+      "Laravel 12",
+      "PHP 8.2",
+      "MySQL",
+      "Bootstrap",
+      "PWA",
+      "Artisan CLI",
+    ],
     summary:
       "productivity suite with task scheduling, pomodoro, diary, gamification (streaks/badges), chatbot, and PWA. started as a portfolio project. got out of hand. in the best way.",
     story: {
@@ -280,14 +287,30 @@ export const CHATBOT_RESPONSES: Record<string, string> = {
     "good question. utkarsh would know better than me — drop him an email at virmauryauttu@gmail.com or use the contact form below 👇",
 };
 
-export const HERO_STATS: Array<{ label: string; value: number; suffix?: string; prefix?: string }> = [
+export const HERO_STATS: Array<{
+  label: string;
+  value: number;
+  suffix?: string;
+  prefix?: string;
+}> = [
   { label: "projects shipped", value: 3, suffix: "+" },
   { label: "internships survived", value: 2 },
   { label: "API speedup", value: 30, suffix: "%" },
 ];
 
 export const TECH_TAGS = [
-  "Laravel", "PHP", "Next.js", "React", "MySQL",
-  "Tailwind CSS", "REST API", "Sanctum", "RBAC",
-  "Postman", "Git", "Agile", "Vercel", "PWA",
+  "Laravel",
+  "PHP",
+  "Next.js",
+  "React",
+  "MySQL",
+  "Tailwind CSS",
+  "REST API",
+  "Sanctum",
+  "RBAC",
+  "Postman",
+  "Git",
+  "Agile",
+  "Vercel",
+  "PWA",
 ];

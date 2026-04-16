@@ -62,7 +62,7 @@ export function AboutSection() {
  * @name     Utkarsh Maurya
  * @college  REC Bijnor — B.Tech IT
  * @grad     2026
- * @location Bareilly, UP, India
+ * @location Varanasi, UP, India
  * @status   open to work
  * @note     yes, the API really is 30% faster
  */`}

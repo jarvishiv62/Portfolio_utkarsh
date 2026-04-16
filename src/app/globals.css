@@ -96,6 +96,23 @@
 }
 
 :root {
+  /* Core palette */
+  --raw-bg: #070719;
+  --raw-surface: #0e0e2e;
+  --raw-surface2: #141445;
+  --raw-warm: #ede8ff;
+  --raw-accent: #d4887a;
+  --raw-violet: #9b8fd4;
+  --raw-indigo: #7b6fff;
+  --raw-cosmic: #00e5c8;
+  --raw-rose: #ff6b8a;
+  --raw-muted: #6b65a8;
+
+  /* Borders */
+  --border-subtle: oklch(0.68 0.14 285 / 0.08);
+  --border-medium: oklch(0.68 0.14 285 / 0.15);
+
+  /* Legacy variables for compatibility */
   --bg: #06030f;
   --surface: #0e0820;
   --surface-2: #160d2e;
@@ -300,5 +317,165 @@ body > * {
 @media (pointer: fine) {
   * {
     cursor: none !important;
+  }
+}
+
+/* ─── SECTION PADDING ────────────────────────────────────────────── */
+.section-pad {
+  padding-block: 7rem;
+  container-type: inline-size;
+}
+@media (max-width: 640px) {
+  .section-pad {
+    padding-block: 4.5rem;
+  }
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────────── */
+.container-portfolio {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .container-portfolio {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* ─── NEBULA BLOBS ───────────────────────────────────────────────── */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: nebula-drift 18s ease-in-out infinite;
+  will-change: transform;
+}
+.nebula-alt {
+  animation-delay: -9s;
+  animation-direction: alternate;
+}
+
+/* ─── TAGS ───────────────────────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono), "Space Mono", monospace;
+  font-size: 0.6875rem;
+  line-height: 1;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  color: var(--raw-muted);
+  white-space: nowrap;
+}
+.tag-accent {
+  border-color: oklch(0.68 0.12 20 / 0.3);
+  color: var(--raw-accent);
+  background: oklch(0.68 0.12 20 / 0.08);
+}
+.tag-violet {
+  border-color: oklch(0.68 0.14 285 / 0.3);
+  color: var(--raw-violet);
+  background: oklch(0.68 0.14 285 / 0.08);
+}
+.tag-indigo {
+  border-color: oklch(0.58 0.22 270 / 0.3);
+  color: var(--raw-indigo);
+  background: oklch(0.58 0.22 270 / 0.08);
+}
+.tag-cosmic {
+  border-color: oklch(0.8 0.15 195 / 0.3);
+  color: var(--raw-cosmic);
+  background: oklch(0.8 0.15 195 / 0.08);
+}
+.tag-rose {
+  border-color: oklch(0.7 0.18 5 / 0.3);
+  color: var(--raw-rose);
+  background: oklch(0.7 0.18 5 / 0.08);
+}
+
+/* ─── GRADIENT TEXT ──────────────────────────────────────────────── */
+.text-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    var(--gold) 0%,
+    var(--accent) 60%,
+    var(--gold) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── TIMELINE ───────────────────────────────────────────────────── */
+.timeline-track {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent) 20%,
+    var(--gold) 50%,
+    var(--accent) 80%,
+    transparent
+  );
+}
+@media (max-width: 768px) {
+  .timeline-track {
+    left: 1.5rem;
+    transform: none;
+  }
+}
+
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+@media (max-width: 768px) {
+  .timeline-node {
+    left: 1.5rem;
+  }
+}
+
+/* ─── SECTION LABEL (cinematic) ──────────────────────────────────── */
+.section-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-label::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ─── KEYFRAME ANIMATIONS ────────────────────────────────────────── */
+@keyframes nebula-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-24px, 12px) scale(1.06);
   }
 }

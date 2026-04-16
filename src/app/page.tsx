@@ -1,7 +1,7 @@
 // src/app/page.tsx
 import { HeroSection } from "@/features/hero/HeroSection";
 import { AboutSection } from "@/features/about/AboutSection";
-import { ExperienceSection } from "@/features/experience/ExperienceSection";
+import { TimelineSection } from "@/features/timeline/TimelineSection";
 import { ProjectsSection } from "@/features/projects/ProjectsSection";
 import { TestimonialsSection } from "@/features/testimonials/TestimonialsSection";
 import { PhilosophySection } from "@/features/philosophy/PhilosophySection";
@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
+      <TimelineSection />
       <ProjectsSection />
       <TestimonialsSection />
       <PhilosophySection />
