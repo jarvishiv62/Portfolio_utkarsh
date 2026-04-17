@@ -24,7 +24,7 @@ export function ScrollToTop() {
           aria-label="Scroll to top"
           style={{
             position: "fixed",
-            bottom: "2rem",
+            bottom: "5rem",
             right: "1.5rem",
             zIndex: 50,
             width: "2.5rem",
@@ -40,10 +40,12 @@ export function ScrollToTop() {
             transition: "box-shadow 0.2s ease",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 28px var(--accent-glow)";
+            (e.currentTarget as HTMLButtonElement).style.boxShadow =
+              "0 0 28px var(--accent-glow)";
           }}
           onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 16px var(--accent-glow)";
+            (e.currentTarget as HTMLButtonElement).style.boxShadow =
+              "0 0 16px var(--accent-glow)";
           }}
         >
           <svg

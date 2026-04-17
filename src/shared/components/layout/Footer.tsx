@@ -45,7 +45,7 @@ export function Footer() {
             <span style={{ color: "var(--gold)" }}>.</span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            full-stack dev. laravel + next.js.<br />
+            full-stack dev. laravel + next.js<br />
             b.tech IT @ REC Bijnor, &apos;26.
           </p>
           {/* available badge */}

@@ -25,7 +25,6 @@ export const NAV_LINKS = [
   { label: "journey", href: "#timeline" },
   { label: "projects", href: "#projects" },
   { label: "testimonials", href: "#testimonials" },
-  { label: "chat", href: "#chatbot" },
   { label: "contact", href: "#contact" },
 ];
 

@@ -86,7 +86,7 @@ export function ContactSection() {
                 },
                 {
                   label: "linkedin",
-                  value: "linkedin.com/in/utkarsh-maurya",
+                  value: "linkedin.com/in/utkarsh--maurya--",
                   href: SITE.linkedin,
                   color: "gold" as const,
                 },

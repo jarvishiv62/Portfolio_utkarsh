@@ -125,8 +125,8 @@
   --border: rgba(168, 85, 247, 0.15);
   --border-gold: rgba(240, 184, 74, 0.15);
   --text: #f0eaf8;
-  --text-muted: #9d8eb5;
-  --text-faint: #5a4f6e;
+  --text-muted: #d4d0ff;
+  --text-faint: #b8b3ff;
   --section-px: 2.5rem;
   --section-py: 5rem;
   --nav-h: 72px;
@@ -478,4 +478,14 @@ body > * {
   50% {
     transform: translate(-24px, 12px) scale(1.06);
   }
+}
+
+/* ─── STICKY NAVIGATION ─────────────────────────────────────────── */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: rgba(6, 3, 15, 0.75);
+  border-bottom: 1px solid var(--border);
 }

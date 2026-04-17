@@ -15,13 +15,12 @@ export function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+        className={cn(
+          "sticky top-0 inset-x-0 z-50 transition-all duration-300",
+          "backdrop-blur-md bg-black/75 border-b",
+        )}
         style={{
           height: "var(--nav-h)",
-          backdropFilter: "blur(16px)",
-          WebkitBackdropFilter: "blur(16px)",
-          background: "rgba(6, 3, 15, 0.75)",
-          borderBottom: "1px solid var(--border)",
         }}
       >
         <nav className="h-full max-w-6xl mx-auto px-5 flex items-center justify-between">
