@@ -19,7 +19,7 @@ const STARTERS = [
 const INITIAL_MESSAGE: Message = {
   role: "bot",
   content:
-    "Hey. I'm Utkarsh's portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
+    "Hey. I'm UTKARSH's portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
 };
 
 interface ChatbotSectionProps {
@@ -84,7 +84,7 @@ export default function ChatbotSection({
           ...prev,
           {
             role: "bot",
-            content: "Network error. Reach Utkarsh at: virmauryauttu@gmail.com",
+            content: "Network error. Reach UTKARSH at: virmauryauttu@gmail.com",
           },
         ]);
       } finally {

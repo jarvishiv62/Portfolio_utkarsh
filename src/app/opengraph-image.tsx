@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Utkarsh Maurya — Full-Stack Developer";
+export const alt = "UTKARSH MAURYA — Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -85,7 +85,7 @@ export default function OpenGraphImage() {
           marginBottom: 8,
         }}
       >
-        utkarsh
+        UTKARSH
       </div>
       <div
         style={{
@@ -146,7 +146,7 @@ export default function OpenGraphImage() {
           fontFamily: "monospace",
         }}
       >
-        devport-utkarsh.vercel.app
+        devport-UTKARSH.vercel.app
       </div>
     </div>,
     { ...size },

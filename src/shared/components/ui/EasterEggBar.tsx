@@ -24,7 +24,7 @@ export function EasterEggBar() {
   useEffect(() => {
     // console easter egg — fires once on mount
     console.log(
-      "%c devport_2 v2.0 — utkarsh maurya ",
+      "%c devport_2 v2.0 — UTKARSH maurya ",
       "background: #a855f7; color: white; font-size: 14px; font-weight: bold; padding: 4px 8px; border-radius: 4px;",
     );
     console.log(

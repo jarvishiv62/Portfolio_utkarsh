@@ -33,7 +33,7 @@ export function Navbar() {
               color: "var(--accent)",
             }}
           >
-            <span style={{ color: "var(--text-faint)" }}>_</span>utkarsh
+            <span style={{ color: "var(--text-faint)" }}>_</span>UTKARSH
             <span style={{ color: "var(--gold)" }}>.</span>
           </Link>
 
@@ -47,7 +47,7 @@ export function Navbar() {
                   <Link
                     href={href}
                     className={cn(
-                      "relative px-3 py-1.5 text-sm font-mono rounded-lg transition-colors duration-200",
+                      "relative px-3 py-1.5 text-sm font-mono transition-colors duration-200",
                       "hover:text-[var(--accent)]",
                     )}
                     style={{
@@ -59,7 +59,7 @@ export function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute bottom-0 left-3 right-3 h-[2px] rounded-full"
+                        className="absolute bottom-0 left-3 right-3 h-[2px]"
                         style={{ background: "var(--accent)" }}
                         transition={{
                           type: "spring",
@@ -80,7 +80,7 @@ export function Navbar() {
             {/* hire me CTA */}
             <a
               href="#contact"
-              className="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-sm font-bold transition-all duration-200 hover:opacity-90"
+              className="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-bold transition-all duration-200 hover:opacity-90"
               style={{
                 background:
                   "linear-gradient(135deg, var(--accent), var(--gold))",
@@ -92,9 +92,9 @@ export function Navbar() {
             </a>
             {/* resume download */}
             <a
-              href="/utkarsh_resume_L.pdf"
+              href="/UTKARSH_resume_L.pdf"
               download
-              className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-mono transition-all duration-200"
+              className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 text-xs font-mono transition-all duration-200"
               style={{
                 border: "1px solid var(--border)",
                 color: "var(--text-muted)",
@@ -151,7 +151,7 @@ export function Navbar() {
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}
-                    className="block py-3 px-4 rounded-xl text-base font-mono transition-colors"
+                    className="block py-3 px-4 text-base font-mono transition-colors"
                     style={{
                       color: "var(--text-muted)",
                       borderBottom: "1px solid var(--border)",
@@ -166,7 +166,7 @@ export function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="flex-1 py-2.5 rounded-xl text-sm font-bold text-center"
+                  className="flex-1 py-2.5 text-sm font-bold text-center"
                   style={{
                     background:
                       "linear-gradient(135deg, var(--accent), var(--gold))",
@@ -177,9 +177,9 @@ export function Navbar() {
                   hire me
                 </a>
                 <a
-                  href="/utkarsh_resume_L.pdf"
+                  href="/UTKARSH_resume_L.pdf"
                   download
-                  className="flex-1 py-2.5 rounded-xl text-sm font-mono text-center"
+                  className="flex-1 py-2.5 text-sm font-mono text-center"
                   style={{
                     border: "1px solid var(--border)",
                     color: "var(--text-muted)",

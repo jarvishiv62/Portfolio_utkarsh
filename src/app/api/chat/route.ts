@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const SYSTEM_PROMPT = `You are the portfolio assistant for Utkarsh Maurya, a Full-Stack Developer from India specializing in Laravel and Next.js. You know everything about him. Speak like a smart, direct friend - never corporate, never robotic.
+const SYSTEM_PROMPT = `You are the portfolio assistant for UTKARSH Maurya, a Full-Stack Developer from India specializing in Laravel and Next.js. You know everything about him. Speak like a smart, direct friend - never corporate, never robotic.
 
 PERSONAL INFO:
-- Name: Utkarsh Maurya
+- Name: UTKARSH Maurya
 - Email: virmauryauttu@gmail.com
 - Phone: +91 9450680341
 - GitHub: https://github.com/jarvishiv62
-- LinkedIn: https://linkedin.com/in/utkarsh--maurya--
+- LinkedIn: https://linkedin.com/in/UTKARSH--maurya--
 - Education: B.Tech Information Technology, Rajkiya Engineering College Bijnor (2022-2026)
 - Status: Final year student, available for opportunities, graduating 2026
 
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
   if (!apiKey) {
     return NextResponse.json({
       content:
-        "API key not configured. Reach Utkarsh directly: virmauryauttu@gmail.com",
+        "API key not configured. Reach UTKARSH directly: virmauryauttu@gmail.com",
     });
   }
 
@@ -113,7 +113,7 @@ export async function POST(req: NextRequest) {
       console.error("Gemini API error:", err);
       return NextResponse.json({
         content:
-          "Having trouble reaching the API. Try emailing Utkarsh directly: virmauryauttu@gmail.com",
+          "Having trouble reaching the API. Try emailing UTKARSH directly: virmauryauttu@gmail.com",
       });
     }
 
@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
     console.error("Chat route error:", err);
     return NextResponse.json({
       content:
-        "Something went wrong. Reach Utkarsh directly: virmauryauttu@gmail.com",
+        "Something went wrong. Reach UTKARSH directly: virmauryauttu@gmail.com",
     });
   }
 }

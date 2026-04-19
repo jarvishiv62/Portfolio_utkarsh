@@ -15,18 +15,34 @@ const CATEGORIES = [
   { key: "ai", label: "ai" },
 ] as const;
 
-function SkillBar({ name, level, color }: { name: string; level: number; color: "purple" | "gold" }) {
+function SkillBar({
+  name,
+  level,
+  color,
+}: {
+  name: string;
+  level: number;
+  color: "purple" | "gold";
+}) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
   return (
     <div ref={ref} className="mb-3">
       <div className="flex justify-between mb-1">
-        <span className="text-sm" style={{ color: "var(--text-muted)" }}>{name}</span>
-        <span className="text-xs font-mono" style={{ color: color === "gold" ? "var(--gold)" : "var(--accent)", fontFamily: "var(--font-mono)" }}>
+        <span className="text-sm" style={{ color: "var(--text-muted)" }}>
+          {name}
+        </span>
+        <span
+          className="text-xs font-mono"
+          style={{
+            color: color === "gold" ? "var(--gold)" : "var(--accent)",
+            fontFamily: "var(--font-mono)",
+          }}
+        >
           {level}%
         </span>
       </div>
       <div
-        className="h-1.5 rounded-full overflow-hidden"
+        className="h-1.5 overflow-hidden"
         style={{ background: "var(--surface-2)" }}
       >
         <div
@@ -50,16 +66,19 @@ export function AboutSection() {
           {/* left — bio */}
           <FadeIn direction="left" delay={0.1}>
             <div
-              className="rounded-2xl p-6 glow-border"
+              className="p-6 glow-border"
               style={{ background: "var(--surface)" }}
             >
               {/* console comment block */}
               <pre
                 className="text-xs leading-relaxed mb-5 overflow-x-auto"
-                style={{ fontFamily: "var(--font-mono)", color: "var(--text-faint)" }}
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  color: "var(--text-faint)",
+                }}
               >
-{`/**
- * @name     Utkarsh Maurya
+                {`/**
+ * @name     UTKARSH Maurya
  * @college  REC Bijnor — B.Tech IT
  * @grad     2026
  * @location Varanasi, UP, India
@@ -68,26 +87,45 @@ export function AboutSection() {
  */`}
               </pre>
 
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
-                i&apos;m a final-year CS student who builds things that actually ship.
-                two real on-site internships — not &quot;worked on a startup idea with friends&quot;.
-                actual clients, actual deadlines, actual prod deployments.
+              <p
+                className="text-sm leading-relaxed mb-4"
+                style={{ color: "var(--text-muted)" }}
+              >
+                i&apos;m a final-year CS student who builds things that actually
+                ship. two real on-site internships — not &quot;worked on a
+                startup idea with friends&quot;. actual clients, actual
+                deadlines, actual prod deployments.
               </p>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
-                my main weapon is <span style={{ color: "var(--accent)" }}>laravel</span> — i can do the full thing:
-                schema design, auth flows, RBAC, query optimization, REST APIs that don&apos;t shame you in postman.
-                i&apos;m learning <span style={{ color: "var(--gold)" }}>next.js seriously</span> now
-                because static HTML is a vibe but SSR is a lifestyle.
+              <p
+                className="text-sm leading-relaxed mb-4"
+                style={{ color: "var(--text-muted)" }}
+              >
+                my main weapon is{" "}
+                <span style={{ color: "var(--accent)" }}>laravel</span> — i can
+                do the full thing: schema design, auth flows, RBAC, query
+                optimization, REST APIs that don&apos;t shame you in postman.
+                i&apos;m learning{" "}
+                <span style={{ color: "var(--gold)" }}>next.js seriously</span>{" "}
+                now because static HTML is a vibe but SSR is a lifestyle.
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--text-muted)" }}
+              >
                 outside of code: i play sports, touch grass occasionally, and
-                genuinely enjoy reading docs. yes really. it&apos;s how you stop guessing.
+                genuinely enjoy reading docs. yes really. it&apos;s how you stop
+                guessing.
               </p>
 
               {/* tech tags */}
               <div className="flex flex-wrap gap-2 mt-5">
                 {TECH_TAGS.map((tag, i) => (
-                  <Badge key={tag} variant={i % 3 === 2 ? "gold" : i % 2 === 0 ? "purple" : "ghost"}>
+                  <Badge
+                    key={tag}
+                    variant={
+                      i % 3 === 2 ? "gold" : i % 2 === 0 ? "purple" : "ghost"
+                    }
+                  >
                     {tag}
                   </Badge>
                 ))}

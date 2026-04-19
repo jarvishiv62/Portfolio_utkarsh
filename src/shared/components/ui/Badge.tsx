@@ -9,8 +9,12 @@ interface BadgeProps {
   className?: string;
 }
 
-export function Badge({ children, variant = "default", className }: BadgeProps) {
-  const base = "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs border";
+export function Badge({
+  children,
+  variant = "default",
+  className,
+}: BadgeProps) {
+  const base = "inline-flex items-center px-2.5 py-0.5 text-xs border";
 
   const styles: Record<BadgeVariant, React.CSSProperties> = {
     default: {

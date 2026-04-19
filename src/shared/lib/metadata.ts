@@ -2,15 +2,15 @@
 import type { Metadata } from "next";
 
 export const SITE = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://devport-utkarsh.vercel.app",
-  name: "Utkarsh Maurya",
-  title: "Utkarsh Maurya — Full-Stack Developer",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://devport-UTKARSH.vercel.app",
+  name: "UTKARSH Maurya",
+  title: "UTKARSH MAURYA — Full-Stack Developer",
   description:
     "Full-stack developer specializing in Laravel + Next.js. Shipped real products at two internships. Cut API response times by 30%. Looking for the next thing to build.",
-  author: "Utkarsh Maurya",
+  author: "UTKARSH Maurya",
   email: "virmauryauttu@gmail.com",
   github: "https://github.com/jarvishiv62",
-  linkedin: "https://linkedin.com/in/utkarsh--maurya--",
+  linkedin: "https://linkedin.com/in/UTKARSH--maurya--",
 };
 
 export function pageMeta(opts?: {
@@ -19,7 +19,7 @@ export function pageMeta(opts?: {
   path?: string;
   image?: string;
 }): Metadata {
-  const title = opts?.title ? `${opts.title} — Utkarsh Maurya` : SITE.title;
+  const title = opts?.title ? `${opts.title} — UTKARSH Maurya` : SITE.title;
   const description = opts?.description ?? SITE.description;
   const url = opts?.path ? `${SITE.url}${opts.path}` : SITE.url;
   const image = opts?.image ?? `${SITE.url}/opengraph-image`;
@@ -45,13 +45,13 @@ export function pageMeta(opts?: {
     },
     authors: [{ name: SITE.author }],
     keywords: [
-      "Utkarsh Maurya",
+      "UTKARSH Maurya",
       "full-stack developer",
       "Laravel developer",
       "Next.js developer",
       "backend developer",
       "REC Bijnor",
-      "Bareilly",
+      "Varanasi",
       "India",
       "web developer portfolio",
     ],

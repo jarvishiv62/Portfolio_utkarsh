@@ -21,10 +21,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: [0.23, 1, 0.32, 1],
+      }}
       className={cn(
-        "rounded-2xl overflow-hidden",
-        isGold ? "glow-border-gold" : "glow-border"
+        "overflow-hidden",
+        isGold ? "glow-border-gold" : "glow-border",
       )}
       style={{ background: "var(--surface)" }}
     >
@@ -35,7 +39,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="flex items-center gap-2 mb-1">
               <span className="label-mono">{project.year}</span>
               <span
-                className="text-xs px-2 py-0.5 rounded-full font-mono"
+                className="text-xs px-2 py-0.5 font-mono"
                 style={{
                   background: isGold ? "var(--gold-dim)" : "var(--accent-dim)",
                   color: isGold ? "var(--gold)" : "var(--accent)",
@@ -47,7 +51,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
             <h3
               className="text-xl font-bold"
-              style={{ fontFamily: "var(--font-display)", color: isGold ? "var(--gold)" : "var(--accent)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                color: isGold ? "var(--gold)" : "var(--accent)",
+              }}
             >
               {project.title}
             </h3>
@@ -58,7 +65,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <motion.button
             onClick={() => setExpanded((v) => !v)}
             whileTap={{ scale: 0.92 }}
-            className="shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-lg transition-colors"
+            className="shrink-0 w-9 h-9 flex items-center justify-center text-lg transition-colors"
             style={{
               background: isGold ? "var(--gold-dim)" : "var(--accent-dim)",
               color: isGold ? "var(--gold)" : "var(--accent)",
@@ -75,7 +82,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </motion.button>
         </div>
 
-        <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+        <p
+          className="text-sm leading-relaxed"
+          style={{ color: "var(--text-muted)" }}
+        >
           {project.summary}
         </p>
 
@@ -84,16 +94,25 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.metrics.map((m) => (
             <div
               key={m.label}
-              className="rounded-lg p-2 text-center"
-              style={{ background: "var(--surface-2)", border: "1px solid var(--border)" }}
+              className="p-2 text-center"
+              style={{
+                background: "var(--surface-2)",
+                border: "1px solid var(--border)",
+              }}
             >
               <div
                 className="text-base font-bold font-mono"
-                style={{ color: isGold ? "var(--gold)" : "var(--accent)", fontFamily: "var(--font-mono)" }}
+                style={{
+                  color: isGold ? "var(--gold)" : "var(--accent)",
+                  fontFamily: "var(--font-mono)",
+                }}
               >
                 {m.value}
               </div>
-              <div className="text-xs mt-0.5" style={{ color: "var(--text-faint)" }}>
+              <div
+                className="text-xs mt-0.5"
+                style={{ color: "var(--text-faint)" }}
+              >
                 {m.label}
               </div>
             </div>
@@ -124,7 +143,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               ].map(({ label, text }) => (
                 <div key={label} className="pt-3">
                   <div className="label-mono mb-1">{label}</div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--text-muted)" }}
+                  >
                     {text}
                   </p>
                 </div>

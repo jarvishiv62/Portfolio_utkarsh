@@ -2,236 +2,6 @@
 // all svgs in one file. yes, one file. fight me.
 import type React from "react";
 
-export function DevAvatarSVG({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 200 240"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      {/* hoodie body */}
-      <path
-        d="M40 160 C40 140 55 130 70 128 L100 122 L130 128 C145 130 160 140 160 160 L165 230 L35 230 Z"
-        fill="var(--surface-2)"
-      />
-      {/* hoodie pocket */}
-      <rect
-        x="75"
-        y="175"
-        width="50"
-        height="28"
-        rx="4"
-        fill="none"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-        opacity="0.8"
-      />
-      {/* hoodie seam */}
-      <line
-        x1="100"
-        y1="128"
-        x2="100"
-        y2="175"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-        opacity="0.7"
-      />
-      {/* circuit traces on hoodie */}
-      <path
-        d="M55 155 L75 155 L75 165 L90 165"
-        stroke="var(--gold)"
-        strokeWidth="1.2"
-        opacity="0.7"
-        fill="none"
-      />
-      <circle cx="90" cy="165" r="2" fill="var(--gold)" opacity="0.8" />
-      <path
-        d="M145 155 L125 155 L125 165 L110 165"
-        stroke="var(--gold)"
-        strokeWidth="1.2"
-        opacity="0.7"
-        fill="none"
-      />
-      <circle cx="110" cy="165" r="2" fill="var(--gold)" opacity="0.8" />
-      {/* neck */}
-      <rect
-        x="88"
-        y="118"
-        width="24"
-        height="14"
-        rx="4"
-        fill="var(--surface)"
-      />
-      {/* head */}
-      <ellipse cx="100" cy="90" rx="38" ry="42" fill="var(--surface)" />
-      {/* hoodie hood outline */}
-      <path
-        d="M58 115 C50 100 48 80 55 60 C62 40 78 28 100 26 C122 28 138 40 145 60 C152 80 150 100 142 115"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.6"
-      />
-      {/* visor — cyber purple tinted glass */}
-      <rect
-        x="65"
-        y="70"
-        width="70"
-        height="32"
-        rx="8"
-        fill="var(--accent-dim)"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-      />
-      {/* visor scanline glow */}
-      <rect
-        x="65"
-        y="70"
-        width="70"
-        height="10"
-        rx="8"
-        fill="var(--accent-dim)"
-        opacity="0.8"
-      />
-      {/* eyes through visor — two glowing dots */}
-      <ellipse cx="84" cy="86" rx="7" ry="5" fill="var(--accent)" opacity="1">
-        <animate
-          attributeName="opacity"
-          values="1;0.6;1"
-          dur="2.5s"
-          repeatCount="indefinite"
-        />
-      </ellipse>
-      <ellipse cx="116" cy="86" rx="7" ry="5" fill="var(--gold)" opacity="1">
-        <animate
-          attributeName="opacity"
-          values="1;0.6;1"
-          dur="2.5s"
-          begin="0.4s"
-          repeatCount="indefinite"
-        />
-      </ellipse>
-      {/* visor reflection streak */}
-      <line
-        x1="68"
-        y1="74"
-        x2="82"
-        y2="88"
-        stroke="white"
-        strokeWidth="1"
-        opacity="0.1"
-      />
-      {/* mouth / chin area */}
-      <path
-        d="M85 108 Q100 114 115 108"
-        stroke="var(--text-muted)"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* headphone band */}
-      <path
-        d="M62 88 C62 58 138 58 138 88"
-        stroke="var(--surface-2)"
-        strokeWidth="10"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M62 88 C62 58 138 58 138 88"
-        stroke="var(--accent)"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-        opacity="0.8"
-      />
-      {/* headphone cups */}
-      <rect
-        x="52"
-        y="82"
-        width="16"
-        height="20"
-        rx="6"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="132"
-        y="82"
-        width="16"
-        height="20"
-        rx="6"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-      />
-      {/* LED on left cup */}
-      <circle cx="60" cy="92" r="3" fill="var(--accent)">
-        <animate
-          attributeName="fill"
-          values="var(--accent);var(--gold);var(--accent)"
-          dur="1.8s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      {/* LED on right cup */}
-      <circle cx="140" cy="92" r="3" fill="var(--gold)">
-        <animate
-          attributeName="fill"
-          values="var(--gold);var(--accent);var(--gold)"
-          dur="1.8s"
-          begin="0.9s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      {/* floating code fragments */}
-      <text
-        x="20"
-        y="60"
-        fontFamily="Space Mono, monospace"
-        fontSize="7"
-        fill="var(--accent)"
-        opacity="0.6"
-      >
-        &lt;/&gt;
-      </text>
-      <text
-        x="165"
-        y="80"
-        fontFamily="Space Mono, monospace"
-        fontSize="7"
-        fill="var(--gold)"
-        opacity="0.6"
-      >
-        {}
-      </text>
-      <text
-        x="22"
-        y="140"
-        fontFamily="Space Mono, monospace"
-        fontSize="6"
-        fill="var(--accent)"
-        opacity="0.4"
-      >
-        fn()
-      </text>
-      <text
-        x="160"
-        y="150"
-        fontFamily="Space Mono, monospace"
-        fontSize="6"
-        fill="var(--gold)"
-        opacity="0.25"
-      >
-        API
-      </text>
-    </svg>
-  );
-}
-
 export function OrbitRingSVG({ className }: { className?: string }) {
   return (
     <svg
@@ -346,7 +116,7 @@ export function TerminalSVG({ className }: { className?: string }) {
         fontSize="9"
         fill="var(--text-muted)"
       >
-        utkarsh@devbox ~{" "}
+        UTKARSH@devbox ~{" "}
       </text>
       {/* content lines */}
       <text
@@ -791,226 +561,6 @@ export function YantraSVG({ className }: { className?: string }) {
   );
 }
 
-export function RobotSVG({
-  className,
-  style,
-}: {
-  className?: string;
-  style?: React.CSSProperties;
-}) {
-  return (
-    <svg
-      viewBox="0 0 140 180"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      style={style}
-      aria-hidden="true"
-    >
-      {/* antenna */}
-      <line
-        x1="70"
-        y1="10"
-        x2="70"
-        y2="26"
-        stroke="var(--accent)"
-        strokeWidth="2"
-      />
-      <circle cx="70" cy="8" r="4" fill="var(--accent)">
-        <animate
-          attributeName="fill"
-          values="var(--accent);var(--gold);var(--accent)"
-          dur="1.5s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      {/* head */}
-      <rect
-        x="30"
-        y="26"
-        width="80"
-        height="60"
-        rx="12"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-      />
-      {/* eye sockets */}
-      <rect
-        x="42"
-        y="40"
-        width="22"
-        height="18"
-        rx="5"
-        fill="var(--surface)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      <rect
-        x="76"
-        y="40"
-        width="22"
-        height="18"
-        rx="5"
-        fill="var(--surface)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      {/* animated scanning eyes */}
-      <rect
-        x="43"
-        y="41"
-        width="20"
-        height="3"
-        rx="1.5"
-        fill="var(--accent)"
-        opacity="0.7"
-      >
-        <animate
-          attributeName="y"
-          values="41;54;41"
-          dur="2s"
-          repeatCount="indefinite"
-        />
-      </rect>
-      <rect
-        x="77"
-        y="41"
-        width="20"
-        height="3"
-        rx="1.5"
-        fill="var(--gold)"
-        opacity="0.7"
-      >
-        <animate
-          attributeName="y"
-          values="54;41;54"
-          dur="2s"
-          repeatCount="indefinite"
-        />
-      </rect>
-      {/* mouth */}
-      <rect
-        x="50"
-        y="72"
-        width="40"
-        height="6"
-        rx="3"
-        fill="var(--surface)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      {[54, 62, 70, 78, 86].map((x, i) => (
-        <rect
-          key={i}
-          x={x}
-          y="73"
-          width="4"
-          height="4"
-          rx="1"
-          fill="var(--accent)"
-          opacity={i % 2 === 0 ? 0.8 : 0.3}
-        />
-      ))}
-      {/* body */}
-      <rect
-        x="22"
-        y="90"
-        width="96"
-        height="70"
-        rx="10"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1.5"
-      />
-      {/* chest panel */}
-      <rect
-        x="38"
-        y="100"
-        width="64"
-        height="40"
-        rx="6"
-        fill="var(--surface)"
-        stroke="var(--border)"
-        strokeWidth="1"
-      />
-      {/* progress bar */}
-      <rect
-        x="44"
-        y="110"
-        width="52"
-        height="6"
-        rx="3"
-        fill="var(--surface-2)"
-      />
-      <rect x="44" y="110" width="36" height="6" rx="3" fill="var(--accent)">
-        <animate
-          attributeName="width"
-          values="10;52;10"
-          dur="3s"
-          repeatCount="indefinite"
-        />
-      </rect>
-      {/* LED indicators */}
-      {[54, 68, 82].map((x, i) => (
-        <circle
-          key={i}
-          cx={x}
-          cy="128"
-          r="4"
-          fill={i === 1 ? "var(--gold)" : "var(--accent)"}
-        >
-          <animate
-            attributeName="opacity"
-            values="1;0.3;1"
-            dur={`${0.8 + i * 0.3}s`}
-            repeatCount="indefinite"
-            begin={`${i * 0.3}s`}
-          />
-        </circle>
-      ))}
-      {/* arms */}
-      <rect
-        x="2"
-        y="92"
-        width="18"
-        height="50"
-        rx="6"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      <rect
-        x="120"
-        y="92"
-        width="18"
-        height="50"
-        rx="6"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      {/* hands */}
-      <circle
-        cx="11"
-        cy="148"
-        r="7"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-      <circle
-        cx="129"
-        cy="148"
-        r="7"
-        fill="var(--surface-2)"
-        stroke="var(--accent)"
-        strokeWidth="1"
-      />
-    </svg>
-  );
-}
-
 export function LostAstronautSVG({ className }: { className?: string }) {
   return (
     <svg
@@ -1211,6 +761,306 @@ export function CircuitCornerSVG({
         stroke="var(--accent)"
         strokeWidth="1"
         opacity="0.3"
+      />
+    </svg>
+  );
+}
+
+export function MandalaCounterrotateAnimSVG({
+  className,
+}: {
+  className?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <style>
+        {`
+          .cr-r1 { transform-origin:100px 100px; animation:cr-cw  38s linear infinite; }
+          .cr-r2 { transform-origin:100px 100px; animation:cr-ccw 22s linear infinite; }
+          .cr-r3 { transform-origin:100px 100px; animation:cr-cw  14s linear infinite; }
+          @keyframes cr-cw  { to{transform:rotate( 360deg)} }
+          @keyframes cr-ccw { to{transform:rotate(-360deg)} }
+        `}
+      </style>
+      {/* outermost ring — slow CW */}
+      <g className="cr-r1">
+        <circle
+          cx="100"
+          cy="100"
+          r="90"
+          stroke="currentColor"
+          strokeWidth="0.4"
+          opacity="0.18"
+        />
+        <g fill="#6C3D91" opacity="0.5">
+          <rect x="98" y="10" width="4" height="8" rx="1" />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(30  100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(60  100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(90  100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(120 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(150 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(180 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(210 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(240 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(270 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(300 100 100)"
+          />
+          <rect
+            x="98"
+            y="10"
+            width="4"
+            height="8"
+            rx="1"
+            transform="rotate(330 100 100)"
+          />
+        </g>
+      </g>
+      {/* middle ring — CCW with petals */}
+      <g className="cr-r2">
+        <circle
+          cx="100"
+          cy="100"
+          r="65"
+          stroke="#6C3D91"
+          strokeWidth="0.8"
+          strokeDasharray="3 7"
+          opacity="0.5"
+        />
+        <g stroke="#6C3D91" strokeWidth="0.8" fill="#6C3D91" fillOpacity="0.09">
+          <path d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z" />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(45  100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(90  100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(135 100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(180 100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(225 100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(270 100 100)"
+          />
+          <path
+            d="M100 100 C94 88 93 72 100 62 C107 72 106 88 100 100Z"
+            transform="rotate(315 100 100)"
+          />
+        </g>
+      </g>
+      {/* innermost ring — fast CW hexagram */}
+      <g className="cr-r3">
+        <polygon
+          points="100,57 137,120 63,120"
+          stroke="#6C3D91"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.65"
+        />
+        <polygon
+          points="100,143 63,80 137,80"
+          stroke="#6C3D91"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.65"
+        />
+      </g>
+      {/* static centre */}
+      <circle
+        cx="100"
+        cy="100"
+        r="14"
+        stroke="#6C3D91"
+        strokeWidth="1.2"
+        fill="none"
+      />
+      <circle cx="100" cy="100" r="5" fill="#6C3D91" />
+    </svg>
+  );
+}
+
+export function DividerDrawAnimSVG({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 420 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <style>
+        {`
+          .dl { stroke-dasharray:200; stroke-dashoffset:200; animation:dd-l 4s ease-out 0s   infinite; }
+          .dr { stroke-dasharray:200; stroke-dashoffset:200; animation:dd-r 4s ease-out 0s   infinite; }
+          .dc { stroke-dasharray:120; stroke-dashoffset:120; animation:dd-l 3s ease-out 3.5s infinite; }
+          @keyframes dd-l { to{stroke-dashoffset:0} }
+          @keyframes dd-r { from{stroke-dashoffset:-200} to{stroke-dashoffset:0} }
+        `}
+      </style>
+      <line
+        x1="8"
+        y1="26"
+        x2="178"
+        y2="26"
+        stroke="#6C3D91"
+        strokeWidth="0.85"
+        className="dl"
+        opacity="0.6"
+      />
+      <line
+        x1="242"
+        y1="26"
+        x2="412"
+        y2="26"
+        stroke="#6C3D91"
+        strokeWidth="0.85"
+        className="dr"
+        opacity="0.6"
+      />
+      <circle cx="164" cy="26" r="2.2" fill="#6C3D91" opacity="0.65" />
+      <circle cx="256" cy="26" r="2.2" fill="#6C3D91" opacity="0.65" />
+      {/* animated lotus */}
+      <g className="dc">
+        <g transform="translate(210,26)">
+          <path
+            d="M0 0 C-7 -7 -7 -16 0 -19 C7 -16 7 -7 0 0Z"
+            stroke="#6C3D91"
+            strokeWidth="1"
+            fill="#6C3D91"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M0 0 C-7 -7 -7 -16 0 -19 C7 -16 7 -7 0 0Z"
+            stroke="#6C3D91"
+            strokeWidth="1"
+            fill="#6C3D91"
+            fillOpacity="0.16"
+            transform="rotate(72)"
+          />
+          <path
+            d="M0 0 C-7 -7 -7 -16 0 -19 C7 -16 7 -7 0 0Z"
+            stroke="#6C3D91"
+            strokeWidth="1"
+            fill="#6C3D91"
+            fillOpacity="0.16"
+            transform="rotate(144)"
+          />
+          <path
+            d="M0 0 C-7 -7 -7 -16 0 -19 C7 -16 7 -7 0 0Z"
+            stroke="#6C3D91"
+            strokeWidth="1"
+            fill="#6C3D91"
+            fillOpacity="0.16"
+            transform="rotate(216)"
+          />
+          <path
+            d="M0 0 C-7 -7 -7 -16 0 -19 C7 -16 7 -7 0 0Z"
+            stroke="#6C3D91"
+            strokeWidth="1"
+            fill="#6C3D91"
+            fillOpacity="0.16"
+            transform="rotate(288)"
+          />
+          <circle r="3.5" fill="#6C3D91" />
+        </g>
+      </g>
+      {/* end ticks */}
+      <path
+        d="M8   23 L8   29"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.35"
+      />
+      <path
+        d="M412 23 L412 29"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.35"
       />
     </svg>
   );

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const BOOT_LINES = [
-  "initializing utkarsh.exe...",
+  "initializing UTKARSH.exe...",
   "loading laravel sorcery...",
   "connecting to prod (dangerous)...",
   "checking for n+1 queries...",
@@ -40,7 +40,7 @@ export default function Loading() {
           className="text-2xl font-black mb-6"
           style={{ fontFamily: "var(--font-display)", color: "var(--accent)" }}
         >
-          _utkarsh<span style={{ color: "var(--gold)" }}>.</span>
+          _UTKARSH<span style={{ color: "var(--gold)" }}>.</span>
         </div>
 
         {/* boot lines */}
@@ -51,7 +51,10 @@ export default function Loading() {
               className="text-xs font-mono"
               style={{
                 fontFamily: "var(--font-mono)",
-                color: i === lines.length - 1 ? "var(--accent)" : "var(--text-faint)",
+                color:
+                  i === lines.length - 1
+                    ? "var(--accent)"
+                    : "var(--text-faint)",
               }}
             >
               <span style={{ color: "var(--text-faint)" }}>›</span> {line}

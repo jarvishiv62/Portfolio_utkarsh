@@ -10,7 +10,7 @@ import type {
   LearningItem,
 } from "@/shared/types";
 
-export const SITE_NAME = "Utkarsh Maurya";
+export const SITE_NAME = "UTKARSH Maurya";
 
 export const TYPEWRITER_WORDS = [
   "full-stack dev (allegedly) 🤙",
@@ -171,7 +171,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Arjun Sharma",
     role: "Senior Backend Developer",
     company: "Dizi Global Solutions",
-    text: "Utkarsh is the kind of intern who reads the error message before googling it. Refreshing. His API optimization cut response times genuinely — not by tweaking a timeout value, but by actually fixing the queries. Would hire without hesitation.",
+    text: "UTKARSH is the kind of intern who reads the error message before googling it. Refreshing. His API optimization cut response times genuinely — not by tweaking a timeout value, but by actually fixing the queries. Would hire without hesitation.",
     initials: "AS",
     accentColor: "purple",
   },
@@ -187,7 +187,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Dr. Anand Verma",
     role: "T&P Coordinator",
     company: "REC Bijnor",
-    text: "Utkarsh built a real product — not a tutorial clone — while managing coursework and two internships. He's the reason our placement cell started taking portfolio projects seriously. Industry-ready well before graduation.",
+    text: "UTKARSH built a real product — not a tutorial clone — while managing coursework and two internships. He's the reason our placement cell started taking portfolio projects seriously. Industry-ready well before graduation.",
     initials: "AV",
     accentColor: "purple",
   },
@@ -263,7 +263,7 @@ export const CHATBOT_SUGGESTIONS = [
 
 export const CHATBOT_RESPONSES: Record<string, string> = {
   greeting:
-    "hey 👋 i'm the AI version of utkarsh. slightly more patient, equally obsessed with API performance. ask me anything.",
+    "hey 👋 i'm the AI version of UTKARSH. slightly more patient, equally obsessed with API performance. ask me anything.",
   skills:
     "strongest skill? laravel + REST API design, no contest. 92% proficiency (self-rated, but the 30% speed boost is receipted). also solid with next.js and growing fast.",
   experience:
@@ -283,7 +283,7 @@ export const CHATBOT_RESPONSES: Record<string, string> = {
   nextjs:
     "next.js clicked when i had to build a client project with SSR for SEO. now i can't go back to plain react. the DX is genuinely different.",
   default:
-    "good question. utkarsh would know better than me — drop him an email at virmauryauttu@gmail.com or use the contact form below 👇",
+    "good question. UTKARSH would know better than me — drop him an email at virmauryauttu@gmail.com or use the contact form below 👇",
 };
 
 export const HERO_STATS: Array<{

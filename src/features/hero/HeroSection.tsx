@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useTypewriter } from "@/shared/hooks/useTypewriter";
 import { AnimatedCounter } from "@/shared/components/ui/AnimatedCounter";
-import { DevAvatarSVG, OrbitRingSVG } from "@/shared/components/ui/Svgs";
+import { MandalaCounterrotateAnimSVG } from "@/shared/components/ui/Svgs";
 import { HERO_STATS, TYPEWRITER_WORDS } from "@/shared/lib/content";
 
 export function HeroSection() {
@@ -35,7 +35,7 @@ export function HeroSection() {
             }}
           >
             <span
-              className="w-2 h-2 rounded-full"
+              className="w-2 h-2"
               style={{
                 background: "var(--accent)",
                 boxShadow: "0 0 8px var(--accent-glow)",
@@ -53,7 +53,7 @@ export function HeroSection() {
             className="text-5xl sm:text-6xl lg:text-7xl font-black mb-2 leading-[1.05]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            <span style={{ color: "var(--text)" }}>utkarsh</span>
+            <span style={{ color: "var(--text)" }}>UTKARSH</span>
             <br />
             <span style={{ color: "var(--accent)" }}>maurya</span>
             <span style={{ color: "var(--gold)" }}>.</span>
@@ -113,7 +113,7 @@ export function HeroSection() {
               see what i&apos;ve built →
             </a>
             <a
-              href="/utkarsh_resume_L.pdf"
+              href="/UTKARSH_resume_L.pdf"
               download
               className="px-6 py-3 rounded-xl font-mono text-sm transition-all duration-200 hover:opacity-80"
               style={{
@@ -166,12 +166,8 @@ export function HeroSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="hidden lg:flex items-center justify-center relative"
         >
-          {/* orbit rings behind avatar */}
-          <OrbitRingSVG className="absolute inset-0 w-full h-full opacity-60" />
-          {/* avatar */}
-          <div style={{ animation: "float 6s ease-in-out infinite" }}>
-            <DevAvatarSVG className="w-72 h-80 relative z-10" />
-          </div>
+          {/* mandala counter-rotate animation as main hero element */}
+          <MandalaCounterrotateAnimSVG className="w-96 h-96 opacity-80" />
           {/* decorative glow */}
           <div
             className="absolute w-56 h-56 rounded-full blur-3xl opacity-20 pointer-events-none"

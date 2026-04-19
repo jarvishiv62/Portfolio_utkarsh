@@ -57,7 +57,7 @@ export default async function ProjectPage({
 
         {/* header */}
         <div
-          className="rounded-2xl p-8 mb-6"
+          className="p-8 mb-6"
           style={{
             background: "var(--surface)",
             border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,
@@ -68,9 +68,11 @@ export default async function ProjectPage({
               <div className="flex items-center gap-2 mb-2">
                 <span className="label-mono">{project.year}</span>
                 <span
-                  className="text-xs px-2 py-0.5 rounded-full font-mono"
+                  className="text-xs px-2 py-0.5 font-mono"
                   style={{
-                    background: isGold ? "var(--gold-dim)" : "var(--accent-dim)",
+                    background: isGold
+                      ? "var(--gold-dim)"
+                      : "var(--accent-dim)",
                     color: isGold ? "var(--gold)" : "var(--accent)",
                     border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,
                     fontFamily: "var(--font-mono)",
@@ -88,7 +90,10 @@ export default async function ProjectPage({
               >
                 {project.title}
               </h1>
-              <p className="mt-2 text-base" style={{ color: "var(--text-muted)" }}>
+              <p
+                className="mt-2 text-base"
+                style={{ color: "var(--text-muted)" }}
+              >
                 {project.tagline}
               </p>
             </div>
@@ -99,8 +104,11 @@ export default async function ProjectPage({
             {project.metrics.map((m) => (
               <div
                 key={m.label}
-                className="rounded-xl p-4 text-center"
-                style={{ background: "var(--surface-2)", border: "1px solid var(--border)" }}
+                className="p-4 text-center"
+                style={{
+                  background: "var(--surface-2)",
+                  border: "1px solid var(--border)",
+                }}
               >
                 <div
                   className="text-xl font-black font-mono"
@@ -111,7 +119,10 @@ export default async function ProjectPage({
                 >
                   {m.value}
                 </div>
-                <div className="text-xs mt-1" style={{ color: "var(--text-faint)" }}>
+                <div
+                  className="text-xs mt-1"
+                  style={{ color: "var(--text-faint)" }}
+                >
                   {m.label}
                 </div>
               </div>
@@ -136,7 +147,10 @@ export default async function ProjectPage({
               }}
             >
               <div className="label-mono mb-2">{label}</div>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--text-muted)" }}
+              >
                 {text}
               </p>
             </div>
@@ -146,7 +160,10 @@ export default async function ProjectPage({
         {/* tech stack */}
         <div
           className="rounded-2xl p-5"
-          style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+          style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+          }}
         >
           <div className="label-mono mb-3">tech stack</div>
           <div className="flex flex-wrap gap-2">

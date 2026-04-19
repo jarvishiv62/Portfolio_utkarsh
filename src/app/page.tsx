@@ -8,17 +8,46 @@ import { PhilosophySection } from "@/features/philosophy/PhilosophySection";
 import { LearningSection } from "@/features/learning/LearningSection";
 import FloatingChatbot from "@/features/chatbot/FloatingChatbot";
 import { ContactSection } from "@/features/contact/ContactSection";
+import { DividerDrawAnimSVG } from "@/shared/components/ui/Svgs";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <AboutSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <TimelineSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <ProjectsSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <TestimonialsSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <PhilosophySection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <LearningSection />
+      <div className="my-16 flex justify-center">
+        <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
+      </div>
+
       <ContactSection />
       <FloatingChatbot />
     </>

@@ -72,7 +72,7 @@ function TimelineCard({ ev }: { ev: (typeof EVENTS)[0] }) {
 
   return (
     <div
-      className="rounded-2xl p-6 cursor-pointer"
+      className="p-6 cursor-pointer"
       style={{
         background: "var(--surface)",
         border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,
@@ -141,7 +141,7 @@ function TimelineCard({ ev }: { ev: (typeof EVENTS)[0] }) {
         {ev.tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs px-2 py-1 rounded-full font-mono"
+            className="text-xs px-2 py-1 font-mono"
             style={{
               background: `${ev.color}20`,
               color: ev.color,

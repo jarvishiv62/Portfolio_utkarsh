@@ -39,7 +39,7 @@ export function ContactSection() {
               >
                 <button
                   onClick={() => copy(SITE.email)}
-                  className="w-full rounded-2xl p-5 text-left transition-all duration-200 group"
+                  className="w-full p-5 text-left transition-all duration-200 group"
                   style={{
                     background: "var(--surface)",
                     border: "1px solid var(--border)",
@@ -86,7 +86,7 @@ export function ContactSection() {
                 },
                 {
                   label: "linkedin",
-                  value: "linkedin.com/in/utkarsh--maurya--",
+                  value: "linkedin.com/in/UTKARSH--maurya--",
                   href: SITE.linkedin,
                   color: "gold" as const,
                 },
@@ -96,7 +96,7 @@ export function ContactSection() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-2xl p-5 transition-all duration-200"
+                  className="block p-5 transition-all duration-200"
                   style={{
                     background: "var(--surface)",
                     border: `1px solid ${color === "gold" ? "var(--border-gold)" : "var(--border)"}`,
@@ -129,9 +129,9 @@ export function ContactSection() {
 
               {/* resume download */}
               <a
-                href="/utkarsh_resume_L.pdf"
+                href="/UTKARSH_resume_L.pdf"
                 download
-                className="flex items-center justify-between rounded-2xl p-5 transition-all duration-200"
+                className="flex items-center justify-between p-5 transition-all duration-200"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border-gold)",
@@ -172,14 +172,14 @@ export function ContactSection() {
 
               {/* availability note */}
               <div
-                className="rounded-2xl p-4 flex items-center gap-3"
+                className="p-4 flex items-center gap-3"
                 style={{
                   background: "var(--accent-dim)",
                   border: "1px solid var(--border)",
                 }}
               >
                 <span
-                  className="w-2.5 h-2.5 rounded-full shrink-0"
+                  className="w-2.5 h-2.5 shrink-0"
                   style={{
                     background: "var(--accent)",
                     boxShadow: "0 0 8px var(--accent-glow)",
@@ -204,7 +204,7 @@ export function ContactSection() {
               </div>
 
               <div
-                className="rounded-2xl p-6"
+                className="p-6"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border)",

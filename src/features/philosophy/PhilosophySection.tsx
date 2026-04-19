@@ -31,7 +31,7 @@ export function PhilosophySection() {
                 return (
                   <FadeIn key={item.num} delay={i * 0.1}>
                     <div
-                      className="rounded-2xl p-6 h-full"
+                      className="p-6 h-full"
                       style={{
                         background: "var(--surface)",
                         border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,
@@ -88,14 +88,14 @@ export function PhilosophySection() {
             {/* quote block */}
             <FadeIn delay={0.5}>
               <div
-                className="mt-8 rounded-2xl p-6 relative overflow-hidden"
+                className="mt-8 p-6 relative overflow-hidden"
                 style={{
                   background: "var(--surface-2)",
                   border: "1px solid var(--border)",
                 }}
               >
                 <div
-                  className="absolute top-0 left-0 w-1 h-full rounded-l-2xl"
+                  className="absolute top-0 left-0 w-1 h-full"
                   style={{
                     background:
                       "linear-gradient(to bottom, var(--accent), var(--gold))",

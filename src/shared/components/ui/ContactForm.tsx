@@ -42,7 +42,7 @@ export function ContactForm() {
   }
 
   const inputClass = cn(
-    "w-full rounded-xl px-4 py-3 text-sm outline-none transition-all duration-200",
+    "w-full px-4 py-3 text-sm outline-none transition-all duration-200",
     "placeholder:opacity-50",
   );
   const inputStyle = {
@@ -61,7 +61,7 @@ export function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="rounded-2xl p-8 text-center"
+        className="p-8 text-center"
         style={{
           background: "var(--surface)",
           border: "1px solid var(--accent)",
@@ -218,7 +218,7 @@ export function ContactForm() {
         type="submit"
         disabled={state === "sending"}
         whileTap={{ scale: 0.97 }}
-        className="w-full py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-200 disabled:opacity-60"
+        className="w-full py-3 font-bold text-sm tracking-wide transition-all duration-200 disabled:opacity-60"
         style={{
           background: "linear-gradient(135deg, var(--accent), var(--gold))",
           color: "white",

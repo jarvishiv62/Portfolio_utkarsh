@@ -4,7 +4,8 @@ import { ContactSection } from "@/features/contact/ContactSection";
 
 export const metadata = pageMeta({
   title: "Contact",
-  description: "Get in touch with Utkarsh Maurya — open to full-time roles and internships.",
+  description:
+    "Get in touch with UTKARSH MAURYA — open to full-time roles and internships.",
   path: "/contact",
 });
 

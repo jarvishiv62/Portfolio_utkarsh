@@ -1,4 +1,4 @@
-# DevPort - Utkarsh
+# DevPort - UTKARSH
 
 A modern, responsive portfolio website built with Next.js 15, React 19, and Tailwind CSS. This project showcases web development skills with a clean, professional design and smooth interactions.
 
@@ -17,6 +17,7 @@ A modern, responsive portfolio website built with Next.js 15, React 19, and Tail
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Next.js 15** - React framework with App Router
 - **React 19** - UI library
 - **TypeScript** - Type-safe JavaScript
@@ -25,6 +26,7 @@ A modern, responsive portfolio website built with Next.js 15, React 19, and Tail
 - **Lucide React** - Icon library
 
 ### Development Tools
+
 - **ESLint** - Code linting and formatting
 - **PostCSS** - CSS processing
 - **Vercel** - Deployment platform
@@ -52,18 +54,20 @@ src/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/devport-utkarsh.git
-cd devport-utkarsh
+git clone https://github.com/yourusername/devport-UTKARSH.git
+cd devport-UTKARSH
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -73,11 +77,13 @@ pnpm install
 ```
 
 3. Copy the environment variables file:
+
 ```bash
 cp .env.example .env.local
 ```
 
 4. Update the environment variables in `.env.local`:
+
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 RESEND_API_KEY=your_resend_api_key
@@ -117,6 +123,7 @@ This project is configured for deployment on Vercel:
 ### Environment Variables for Production
 
 Make sure to set these in your Vercel dashboard:
+
 - `NEXT_PUBLIC_SITE_URL` - Your production URL
 - `RESEND_API_KEY` - For contact form emails
 - `ANTHROPIC_API_KEY` - For AI chatbot functionality
@@ -141,11 +148,13 @@ The AI chatbot is prepared for Anthropic API integration:
 ## 🎨 Customization
 
 ### Styling
+
 - Modify `tailwind.config.js` for design system changes
 - Update colors, fonts, and spacing in the configuration
 - Components use Tailwind classes for consistent styling
 
 ### Content
+
 - Update hero section in `src/features/hero/`
 - Modify projects in `src/features/projects/`
 - Adjust contact information in `src/features/contact/`
@@ -153,6 +162,7 @@ The AI chatbot is prepared for Anthropic API integration:
 ## 🔧 Code Quality
 
 This project includes:
+
 - **TypeScript** for type safety
 - **ESLint** for code consistency
 - **Prettier** (recommended) for code formatting
@@ -168,7 +178,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
-- Portfolio: [https://devport-utkarsh.vercel.app](https://devport-utkarsh.vercel.app)
+- Portfolio: [https://devport-UTKARSH.vercel.app](https://devport-UTKARSH.vercel.app)
 - Email: [virmauryauttu@gmail.com](mailto:virmauryauttu@gmail.com)
 - GitHub: [jarvishiv62](https://github.com/jarvishiv62)
 
