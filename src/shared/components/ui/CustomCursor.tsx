@@ -57,7 +57,7 @@ export function CustomCursor() {
       document.removeEventListener("mouseleave", leave);
       document.removeEventListener("mouseenter", enter);
     };
-  }, [mounted, isCoarse, mouseX, mouseY]);
+  }, [mounted, isCoarse, mouseX, mouseY, visible]);
 
   // don't render on SSR or touch devices, or when modal is open
   if (!mounted || isCoarse || simulationState.isOpen) {

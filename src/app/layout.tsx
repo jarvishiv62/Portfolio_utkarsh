@@ -19,13 +19,17 @@ export const viewport: Viewport = {
 const themeScript = `
 (function() {
   try {
-    var t = localStorage.getItem('theme');
-    if (t === 'light') document.documentElement.classList.add('light');
+    var t = localStorage.getItem(&apos;theme&apos;);
+    if (t === &apos;light&apos;) document.documentElement.classList.add(&apos;light&apos;);
   } catch(e) {}
 })();
 `;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

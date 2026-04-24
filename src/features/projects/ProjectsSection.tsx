@@ -46,7 +46,7 @@ export function ProjectsSection() {
       <div className="container-portfolio">
         <CinemaReveal>
           <CinemaChild>
-            <p className="section-label">// selected work</p>
+            <p className="section-label">{`// selected work`}</p>
           </CinemaChild>
 
           {/* Headline + mode toggle */}
@@ -120,7 +120,7 @@ export function ProjectsSection() {
           <div
             style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
-            {projects.map((project, i) => {
+            {projects.map((project, _i) => {
               const accentColor =
                 COLOR_MAP[project.stackColor || "accent"] ??
                 "var(--raw-accent)";

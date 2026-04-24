@@ -324,7 +324,7 @@ export function ProjectDetailClient({ project }: Props) {
             },
             {
               id: "proudof",
-              label: "03 — What I'm Proud Of",
+              label: "03 — What I&apos;m Proud Of",
               color: "var(--raw-indigo)",
               content: project.proudOf,
             },

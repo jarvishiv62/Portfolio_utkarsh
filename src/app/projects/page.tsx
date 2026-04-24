@@ -32,7 +32,7 @@ export default function ProjectsPage() {
       <div className="container-portfolio">
         <CinemaReveal>
           <CinemaChild>
-            <p className="section-label">// all projects</p>
+            <p className="section-label">{`// all projects`}</p>
           </CinemaChild>
 
           {/* Headline */}
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                     lineHeight: 1.1,
                   }}
                 >
-                  every project I've built.
+                  every project I&apos;ve built.
                   <br />
                   <span
                     style={{
@@ -82,9 +82,9 @@ export default function ProjectsPage() {
                     maxWidth: "600px",
                   }}
                 >
-                  From AI-powered productivity platforms to medical imaging research, 
-                  here's everything I've built — shipped projects, learning experiments, 
-                  and everything in between.
+                  From AI-powered productivity platforms to medical imaging
+                  research, here&apos;s everything I&apos;ve built — shipped
+                  projects, learning experiments, and everything in between.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
           <div
             style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
-            {projects.map((project, i) => {
+            {projects.map((project, _i) => {
               const accentColor =
                 COLOR_MAP[project.stackColor || "accent"] ??
                 "var(--raw-accent)";
@@ -209,17 +209,25 @@ export default function ProjectsPage() {
                               style={{
                                 fontFamily: "var(--font-mono), monospace",
                                 fontSize: "0.625rem",
-                                color: project.status === "shipped" ? "var(--raw-cosmic)" : 
-                                         project.status === "research" ? "var(--raw-rose)" : 
-                                         project.status === "development" ? "var(--raw-violet)" : 
-                                         "var(--raw-muted)",
+                                color:
+                                  project.status === "shipped"
+                                    ? "var(--raw-cosmic)"
+                                    : project.status === "research"
+                                      ? "var(--raw-rose)"
+                                      : project.status === "development"
+                                        ? "var(--raw-violet)"
+                                        : "var(--raw-muted)",
                                 border: "1px solid var(--border-subtle)",
                                 padding: "0.15rem 0.5rem",
                                 borderRadius: "9999px",
-                                background: project.status === "shipped" ? "oklch(0.8 0.15 195 / 0.1)" : 
-                                             project.status === "research" ? "oklch(0.7 0.18 5 / 0.1)" : 
-                                             project.status === "development" ? "oklch(0.68 0.14 285 / 0.1)" : 
-                                             "transparent",
+                                background:
+                                  project.status === "shipped"
+                                    ? "oklch(0.8 0.15 195 / 0.1)"
+                                    : project.status === "research"
+                                      ? "oklch(0.7 0.18 5 / 0.1)"
+                                      : project.status === "development"
+                                        ? "oklch(0.68 0.14 285 / 0.1)"
+                                        : "transparent",
                               }}
                             >
                               {project.status}
@@ -548,11 +556,9 @@ export default function ProjectsPage() {
                 lineHeight: 1.7,
               }}
             >
-              that's all {projects.length} projects.
+              that&apos;s all {projects.length} projects.
               <br />
-              <span style={{ opacity: 0.6 }}>
-                (for now. more coming soon.)
-              </span>
+              <span style={{ opacity: 0.6 }}>(for now. more coming soon.)</span>
             </p>
           </CinemaChild>
         </CinemaReveal>

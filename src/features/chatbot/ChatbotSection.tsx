@@ -9,7 +9,7 @@ interface Message {
 }
 
 const STARTERS = [
-  "What's his strongest skill?",
+  "What&apos;s his strongest skill?",
   "Tell me about DailyDrive.",
   "Real client work?",
   "Available for hire?",
@@ -19,7 +19,7 @@ const STARTERS = [
 const INITIAL_MESSAGE: Message = {
   role: "bot",
   content:
-    "Hey. I'm UTKARSH's portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
+    "Hey. I&apos;m UTKARSH&apos;s portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
 };
 
 interface ChatbotSectionProps {
