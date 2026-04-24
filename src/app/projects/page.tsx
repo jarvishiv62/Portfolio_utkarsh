@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
-import { getFeaturedProjects } from "@/data/projects";
+import { projects } from "@/data/projects";
 import { useApp } from "@/store/AppContext";
 import { CinemaReveal, CinemaChild } from "@/shared/components/ui/Reveal";
 
@@ -24,32 +24,18 @@ const TAG_CLASS: Record<string, string> = {
   rose: "tag-rose",
 };
 
-export function ProjectsSection() {
+export default function ProjectsPage() {
   const { viewMode, toggleViewMode, openSimulation, trackEvent } = useApp();
-  const projects = getFeaturedProjects();
 
   return (
-    <section id="work" className="section-pad" style={{ position: "relative" }}>
-      <div
-        className="nebula"
-        style={{
-          width: 600,
-          height: 600,
-          top: "-5%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          background: "oklch(0.58 0.22 270 / 0.06)",
-          pointerEvents: "none",
-        }}
-      />
-
+    <main className="section-pad" style={{ minHeight: "100vh" }}>
       <div className="container-portfolio">
         <CinemaReveal>
           <CinemaChild>
-            <p className="section-label">// selected work</p>
+            <p className="section-label">// all projects</p>
           </CinemaChild>
 
-          {/* Headline + mode toggle */}
+          {/* Headline */}
           <CinemaChild>
             <div
               style={{
@@ -63,17 +49,17 @@ export function ProjectsSection() {
               }}
             >
               <div>
-                <h2
+                <h1
                   style={{
                     fontFamily: "var(--font-display), Syne, sans-serif",
-                    fontSize: "clamp(2rem, 4vw, 3rem)",
+                    fontSize: "clamp(2.5rem, 5vw, 4rem)",
                     fontWeight: 800,
                     letterSpacing: "-0.02em",
                     color: "var(--raw-warm)",
                     lineHeight: 1.1,
                   }}
                 >
-                  stuff I actually built.
+                  every project I've built.
                   <br />
                   <span
                     style={{
@@ -84,9 +70,22 @@ export function ProjectsSection() {
                       fontWeight: 400,
                     }}
                   >
-                    (not just cloned.)
+                    (the complete collection.)
                   </span>
-                </h2>
+                </h1>
+                <p
+                  style={{
+                    marginTop: "1rem",
+                    fontSize: "1.1rem",
+                    color: "var(--raw-muted)",
+                    lineHeight: 1.6,
+                    maxWidth: "600px",
+                  }}
+                >
+                  From AI-powered productivity platforms to medical imaging research, 
+                  here's everything I've built — shipped projects, learning experiments, 
+                  and everything in between.
+                </p>
               </div>
 
               {/* Mode toggle */}
@@ -205,6 +204,25 @@ export function ProjectsSection() {
                               }}
                             >
                               {project.year}
+                            </span>
+                            <span
+                              style={{
+                                fontFamily: "var(--font-mono), monospace",
+                                fontSize: "0.625rem",
+                                color: project.status === "shipped" ? "var(--raw-cosmic)" : 
+                                         project.status === "research" ? "var(--raw-rose)" : 
+                                         project.status === "development" ? "var(--raw-violet)" : 
+                                         "var(--raw-muted)",
+                                border: "1px solid var(--border-subtle)",
+                                padding: "0.15rem 0.5rem",
+                                borderRadius: "9999px",
+                                background: project.status === "shipped" ? "oklch(0.8 0.15 195 / 0.1)" : 
+                                             project.status === "research" ? "oklch(0.7 0.18 5 / 0.1)" : 
+                                             project.status === "development" ? "oklch(0.68 0.14 285 / 0.1)" : 
+                                             "transparent",
+                              }}
+                            >
+                              {project.status}
                             </span>
                           </div>
                           <p
@@ -525,20 +543,20 @@ export function ProjectsSection() {
                 fontFamily: "var(--font-mono), monospace",
                 fontSize: "0.75rem",
                 color: "var(--raw-muted)",
-                marginTop: "2.5rem",
+                marginTop: "3rem",
                 textAlign: "center",
                 lineHeight: 1.7,
               }}
             >
-              more projects incoming.
+              that's all {projects.length} projects.
               <br />
               <span style={{ opacity: 0.6 }}>
-                (not being coy — literally building them right now.)
+                (for now. more coming soon.)
               </span>
             </p>
           </CinemaChild>
         </CinemaReveal>
       </div>
-    </section>
+    </main>
   );
 }

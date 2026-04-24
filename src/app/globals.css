@@ -108,6 +108,12 @@
   --raw-rose: #ff6b8a;
   --raw-muted: #6b65a8;
 
+  /* Enhanced project colors */
+  --raw-accent: #ff6b6b;
+  --raw-violet: #8b5cf6;
+  --raw-indigo: #6366f1;
+  --raw-cosmic: #06b6d4;
+
   /* Borders */
   --border-subtle: oklch(0.68 0.14 285 / 0.08);
   --border-medium: oklch(0.68 0.14 285 / 0.15);
@@ -318,6 +324,15 @@ body > * {
   * {
     cursor: none !important;
   }
+
+  /* Allow cursor on modal elements */
+  .simulation-modal-backdrop * {
+    cursor: auto !important;
+  }
+
+  .simulation-modal-content {
+    cursor: auto !important;
+  }
 }
 
 /* ─── SECTION PADDING ────────────────────────────────────────────── */
@@ -488,4 +503,96 @@ body > * {
   backdrop-filter: blur(16px);
   background: rgba(6, 3, 15, 0.75);
   border-bottom: 1px solid var(--border);
+}
+
+/* ─── ENHANCED PROJECT CARDS ─────────────────────────────────────── */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: nebula-drift 20s ease-in-out infinite;
+}
+
+.container-portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139, 92, 246, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-hover:hover .card-glow {
+  opacity: 1;
+}
+
+/* Tag styles */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6875rem;
+  border-radius: 9999px;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+.tag-accent {
+  background: oklch(0.68 0.14 285 / 0.08);
+  color: var(--raw-accent);
+  border-color: var(--raw-accent);
+}
+
+.tag-violet {
+  background: oklch(0.68 0.14 285 / 0.08);
+  color: var(--raw-violet);
+  border-color: var(--raw-violet);
+}
+
+.tag-indigo {
+  background: oklch(0.68 0.14 285 / 0.08);
+  color: var(--raw-indigo);
+  border-color: var(--raw-indigo);
+}
+
+.tag-cosmic {
+  background: oklch(0.68 0.14 285 / 0.08);
+  color: var(--raw-cosmic);
+  border-color: var(--raw-cosmic);
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid background for detail pages */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Enhanced border variables */
+:root {
+  --border-strong: oklch(0.68 0.14 285 / 0.25);
 }

@@ -1,14 +1,48 @@
 // src/shared/types/index.ts
 // types. because 'any' is a cry for help.
 
-export type SkillCategory = "backend" | "frontend" | "database" | "tools" | "ai";
-export type ProjectStatus = "shipped" | "wip" | "archived";
-export type ProjectColor = "purple" | "gold";
+export type SkillCategory =
+  | "backend"
+  | "frontend"
+  | "database"
+  | "tools"
+  | "ai";
+export type ProjectStatus =
+  | "shipped"
+  | "wip"
+  | "archived"
+  | "research"
+  | "development"
+  | "learning";
+export type ProjectColor =
+  | "purple"
+  | "gold"
+  | "accent"
+  | "violet"
+  | "indigo"
+  | "cosmic";
 export type LearningStatus = "active" | "queued" | "done";
 export type TestimonialAccent = "purple" | "gold";
 export type ChatbotState = "idle" | "thinking" | "done";
 export type FormState = "idle" | "sending" | "success" | "error";
 export type NavDirection = "up" | "left" | "right" | "none";
+export type ViewMode = "story" | "tech";
+
+interface SimulationStep {
+  id: string;
+  title: string;
+  description: string;
+  code?: string;
+  diagram?: string;
+  details: string[];
+}
+
+export interface SimulationContent {
+  projectSlug: string;
+  title: string;
+  description: string;
+  steps: SimulationStep[];
+}
 
 export interface Skill {
   name: string;
@@ -42,6 +76,7 @@ export interface ProjectStory {
 export interface Project {
   slug: string;
   title: string;
+  name: string; // for compatibility with reference
   tagline: string;
   year: string;
   status: ProjectStatus;
@@ -50,6 +85,16 @@ export interface Project {
   story: ProjectStory;
   metrics: ProjectMetric[];
   color: ProjectColor;
+  stackColor?: string; // for color mapping
+  hook?: string; // hook quote for story mode
+  oneliner?: string; // one line summary
+  impact?: string[]; // impact points
+  problem?: string; // problem statement for tech mode
+  github?: string; // GitHub URL
+  live?: string; // Live demo URL
+  // Enhanced fields for detail page
+  build?: string; // detailed build process
+  proudOf?: string; // what I'm proud of
 }
 
 export interface Testimonial {

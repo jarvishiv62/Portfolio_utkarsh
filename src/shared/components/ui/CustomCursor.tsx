@@ -2,12 +2,14 @@
 // src/shared/components/ui/CustomCursor.tsx
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
+import { useApp } from "@/store/AppContext";
 
 export function CustomCursor() {
   const [mounted, setMounted] = useState(false);
   const [isCoarse, setIsCoarse] = useState(false);
   const [visible, setVisible] = useState(false);
   const [clicking, setClicking] = useState(false);
+  const { simulationState } = useApp();
 
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
@@ -29,6 +31,13 @@ export function CustomCursor() {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
       setVisible(true);
+      console.log(
+        "Cursor moved to:",
+        e.clientX,
+        e.clientY,
+        "visible:",
+        visible,
+      );
     };
     const down = () => setClicking(true);
     const up = () => setClicking(false);
@@ -50,8 +59,10 @@ export function CustomCursor() {
     };
   }, [mounted, isCoarse, mouseX, mouseY]);
 
-  // don't render on SSR or touch devices
-  if (!mounted || isCoarse) return null;
+  // don't render on SSR or touch devices, or when modal is open
+  if (!mounted || isCoarse || simulationState.isOpen) {
+    return null;
+  }
 
   return (
     <>
@@ -89,7 +100,7 @@ export function CustomCursor() {
           borderRadius: "50%",
           border: "1px solid var(--accent)",
           pointerEvents: "none",
-          zIndex: 9998,
+          zIndex: 998,
           opacity: 0.5,
         }}
         animate={{

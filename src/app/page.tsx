@@ -23,12 +23,12 @@ export default function HomePage() {
         <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
       </div>
 
-      <TimelineSection />
+      <ProjectsSection />
       <div className="my-16 flex justify-center">
         <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
       </div>
 
-      <ProjectsSection />
+      <TimelineSection />
       <div className="my-16 flex justify-center">
         <DividerDrawAnimSVG className="w-full max-w-4xl h-12" />
       </div>
