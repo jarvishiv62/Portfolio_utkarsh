@@ -23,7 +23,7 @@ export const TYPEWRITER_WORDS = [
 export const NAV_LINKS = [
   { label: "about", href: "#about" },
   { label: "journey", href: "#timeline" },
-  { label: "projects", href: "/projects" },
+  { label: "All projects", href: "/allprojects" },
   { label: "testimonials", href: "#testimonials" },
   { label: "contact", href: "#contact" },
 ];
@@ -125,6 +125,7 @@ export const PROJECTS: Project[] = [
     problem:
       "Built a comprehensive productivity platform to solve subscription fatigue and scattered data across multiple apps.",
     github: "https://github.com/jarvishiv62/Productivity-Suite-Web-App",
+    videoUrl: "/videos/dailydrive.mp4",
     build:
       "I started with Laravel 11 because I needed a robust backend that could handle complex relationships between tasks, goals, diary entries, and user statistics. The database schema was normalized across 8+ Eloquent models with proper foreign key relationships. For the AI chatbot, I integrated OpenAI's API with intelligent fallback to handle rate limits. The PWA functionality was implemented using Laravel's built-in service worker support combined with a custom manifest file. The biggest challenge was the real-time AJAX updates throughout the application without breaking the user experience.",
     proudOf:
@@ -179,6 +180,7 @@ export const PROJECTS: Project[] = [
     problem:
       "Built a sophisticated microservices platform to solve resume optimization challenges with multiple AI engines.",
     github: "https://github.com/jarvishiv62/resume_builder_v1",
+    videoUrl: "/videos/resume-builder.mp4",
     build:
       "This was my first real microservices architecture. I used Laravel 11 for the backend API and authentication because of its robust Sanctum integration. The Python FastAPI service handles all NLP processing using TF-IDF and RAKE algorithms for keyword extraction. The Next.js frontend features a Monaco editor with custom LaTeX language support. The biggest technical challenge was implementing real-time ATS scoring - I had to reverse-engineer how ATS systems work and create scoring algorithms. The multi-AI fallback system was crucial for reliability - if Grok fails, it falls back to Gemini, then to local NLP processing.",
     proudOf:
@@ -233,6 +235,7 @@ export const PROJECTS: Project[] = [
     problem:
       "Built an enterprise-grade SaaS platform to solve disconnected health services with multi-tenant architecture.",
     github: "https://github.com/jarvishiv62/Careops_hackathon",
+    videoUrl: "/videos/vitalflow.mp4",
     build:
       "This was built for a hackathon competition, so I had to be strategic about the MVP. I chose Next.js 16 with TypeScript for the frontend because of the App Router and built-in optimizations. The backend uses Node.js with Express.js and PostgreSQL with Prisma ORM for type safety. The multi-tenant architecture was the most complex part - each wellness center gets complete data isolation. I implemented Server-Sent Events instead of WebSockets for real-time updates because they're simpler and fit the use case perfectly. The AI integration uses OpenAI for sentiment analysis and smart replies, with careful prompt engineering for healthcare contexts.",
     proudOf:

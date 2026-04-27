@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import type { Project } from "@/shared/types";
 import { useApp } from "@/store/AppContext";
 import { CinemaReveal, CinemaChild } from "@/shared/components/ui/Reveal";
+import { VideoFrame } from "@/shared/components/ui/VideoFrame"; // ← new import
 
 const COLOR_MAP: Record<string, string> = {
   accent: "var(--raw-accent)",
@@ -277,6 +278,58 @@ export function ProjectDetailClient({ project }: Props) {
             </div>
           </CinemaChild>
 
+          {/* ── VIDEO SHOWCASE ── */}
+          <CinemaChild>
+            <div style={{ marginBottom: "3rem" }}>
+              {/* Section label */}
+              <p
+                style={{
+                  fontFamily: "var(--font-mono), monospace",
+                  fontSize: "0.6875rem",
+                  color: accentColor,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.625rem",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 24,
+                    height: 1,
+                    background: accentColor,
+                  }}
+                />
+                00 — UI Preview
+              </p>
+
+              {/* Video player */}
+              <VideoFrame
+                videoUrl={project.videoUrl}
+                accentColor={accentColor}
+                compact={false}
+                projectName={project.name}
+              />
+
+              {project.videoUrl && (
+                <p
+                  style={{
+                    fontFamily: "var(--font-mono), monospace",
+                    fontSize: "0.6875rem",
+                    color: "var(--raw-muted)",
+                    marginTop: "0.625rem",
+                    opacity: 0.6,
+                  }}
+                >
+                  autoplay · muted · looped — 5s UI walkthrough
+                </p>
+              )}
+            </div>
+          </CinemaChild>
+
           {/* Divider */}
           <CinemaChild>
             <div
@@ -324,7 +377,7 @@ export function ProjectDetailClient({ project }: Props) {
             },
             {
               id: "proudof",
-              label: "03 — What I&apos;m Proud Of",
+              label: "03 — What I'm Proud Of",
               color: "var(--raw-indigo)",
               content: project.proudOf,
             },

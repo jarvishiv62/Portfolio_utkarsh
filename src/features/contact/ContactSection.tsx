@@ -158,7 +158,7 @@ export function ContactSection() {
                     className="text-xs"
                     style={{ color: "var(--text-faint)" }}
                   >
-                    PDF · updated jan 2026
+                    PDF · updated apr 2026
                   </div>
                 </div>
                 <span

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import { useApp } from "@/store/AppContext";
 import { CinemaReveal, CinemaChild } from "@/shared/components/ui/Reveal";
+import { VideoFrame } from "@/shared/components/ui/VideoFrame";
 
 const COLOR_MAP: Record<string, string> = {
   accent: "var(--raw-accent)",
@@ -24,7 +25,7 @@ const TAG_CLASS: Record<string, string> = {
   rose: "tag-rose",
 };
 
-export default function ProjectsPage() {
+export default function AllProjectsPage() {
   const { viewMode, toggleViewMode, openSimulation, trackEvent } = useApp();
 
   return (
@@ -158,6 +159,14 @@ export default function ProjectsPage() {
                         height: 3,
                         background: `linear-gradient(90deg, ${accentColor}, transparent)`,
                       }}
+                    />
+
+                    {/* ── VIDEO FRAME ── */}
+                    <VideoFrame
+                      videoUrl={project.videoUrl}
+                      accentColor={accentColor}
+                      compact
+                      projectName={project.name}
                     />
 
                     <div style={{ padding: "1.75rem" }}>

@@ -9,7 +9,7 @@ interface Message {
 }
 
 const STARTERS = [
-  "What&apos;s his strongest skill?",
+  "What is his strongest skill?",
   "Tell me about DailyDrive.",
   "Real client work?",
   "Available for hire?",

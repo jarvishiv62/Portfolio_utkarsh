@@ -160,7 +160,7 @@ export function Footer() {
           className="text-xs font-mono"
           style={{ color: "var(--text-faint)", fontFamily: "var(--font-mono)" }}
         >
-          © 2025 UTKARSH MAURYA — built with Next.js 15 + excessive caffeine
+          © 2026 UTKARSH MAURYA — built with Next.js 15 + excessive caffeine
         </p>
         {/* bottom quip */}
         <p

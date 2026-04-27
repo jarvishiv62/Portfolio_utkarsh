@@ -59,7 +59,7 @@ const EVENTS = [
     year: "2026",
     type: "future",
     title: "Graduating.",
-    org: "What&apos;s next?",
+    org: "What's next?",
     desc: "Final year. Looking for a full-stack role where problems are real, team ships, and &quot;production-ready&quot; is actual bar.",
     tags: ["Available", "Full-Stack", "Open to roles"],
     color: "var(--accent)",
@@ -239,7 +239,33 @@ export function TimelineSection() {
           </div>
 
           {/* Mobile track */}
-          <style>{`@media(max-width:640px){.tl-track-desktop{display:none!important}.tl-track-mobile{display:block!important}}`}</style>
+          <style>{`
+            @media(max-width:640px){
+              .tl-track-desktop{display:none!important}
+              .tl-track-mobile{display:block!important}
+              .timeline-item{
+                grid-template-columns:1fr!important;
+                text-align:center!important;
+                padding-left:3rem!important;
+                position:relative!important;
+              }
+              .timeline-item > div:first-child{
+                text-align:left!important;
+                padding:0!important;
+                grid-column:1!important;
+                opacity:1!important;
+              }
+              .timeline-item > div:last-child{
+                display:none!important;
+              }
+              .timeline-item > div:nth-child(2){
+                position:absolute!important;
+                left:1.5rem!important;
+                top:1.5rem!important;
+                transform:translateX(-50%)!important;
+              }
+            }
+          `}</style>
           <div
             className="tl-track-mobile"
             style={{
@@ -277,6 +303,7 @@ export function TimelineSection() {
                     gap: "0",
                     position: "relative",
                   }}
+                  className="timeline-item"
                 >
                   {/* Left content */}
                   <div

@@ -153,6 +153,22 @@
   --text: #1a0a2e;
   --text-muted: #5a3d7a;
   --text-faint: #9b7fc0;
+
+  /* Light mode raw variables for project components */
+  --raw-bg: #f8f5ff;
+  --raw-surface: #f0ebff;
+  --raw-surface2: #e8e1ff;
+  --raw-warm: #1a0a2e;
+  --raw-accent: #7c22d4;
+  --raw-violet: #6b3cc9;
+  --raw-indigo: #5b4bc7;
+  --raw-cosmic: #0ea5e9;
+  --raw-rose: #e11d48;
+  --raw-muted: #5a3d7a;
+
+  /* Light mode borders */
+  --border-subtle: rgba(124, 34, 212, 0.12);
+  --border-medium: rgba(124, 34, 212, 0.25);
 }
 
 *,
@@ -386,29 +402,29 @@ body > * {
   white-space: nowrap;
 }
 .tag-accent {
-  border-color: oklch(0.68 0.12 20 / 0.3);
+  border-color: var(--raw-accent);
   color: var(--raw-accent);
-  background: oklch(0.68 0.12 20 / 0.08);
+  background: color-mix(in srgb, var(--raw-accent) 8%, transparent);
 }
 .tag-violet {
-  border-color: oklch(0.68 0.14 285 / 0.3);
+  border-color: var(--raw-violet);
   color: var(--raw-violet);
-  background: oklch(0.68 0.14 285 / 0.08);
+  background: color-mix(in srgb, var(--raw-violet) 8%, transparent);
 }
 .tag-indigo {
-  border-color: oklch(0.58 0.22 270 / 0.3);
+  border-color: var(--raw-indigo);
   color: var(--raw-indigo);
-  background: oklch(0.58 0.22 270 / 0.08);
+  background: color-mix(in srgb, var(--raw-indigo) 8%, transparent);
 }
 .tag-cosmic {
-  border-color: oklch(0.8 0.15 195 / 0.3);
+  border-color: var(--raw-cosmic);
   color: var(--raw-cosmic);
-  background: oklch(0.8 0.15 195 / 0.08);
+  background: color-mix(in srgb, var(--raw-cosmic) 8%, transparent);
 }
 .tag-rose {
-  border-color: oklch(0.7 0.18 5 / 0.3);
+  border-color: var(--raw-rose);
   color: var(--raw-rose);
-  background: oklch(0.7 0.18 5 / 0.08);
+  background: color-mix(in srgb, var(--raw-rose) 8%, transparent);
 }
 
 /* ─── GRADIENT TEXT ──────────────────────────────────────────────── */
@@ -532,7 +548,7 @@ body > * {
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    rgba(139, 92, 246, 0.1) 0%,
+    color-mix(in srgb, var(--raw-accent) 10%, transparent) 0%,
     transparent 70%
   );
   opacity: 0;
@@ -556,25 +572,25 @@ body > * {
 }
 
 .tag-accent {
-  background: oklch(0.68 0.14 285 / 0.08);
+  background: color-mix(in srgb, var(--raw-accent) 8%, transparent);
   color: var(--raw-accent);
   border-color: var(--raw-accent);
 }
 
 .tag-violet {
-  background: oklch(0.68 0.14 285 / 0.08);
+  background: color-mix(in srgb, var(--raw-violet) 8%, transparent);
   color: var(--raw-violet);
   border-color: var(--raw-violet);
 }
 
 .tag-indigo {
-  background: oklch(0.68 0.14 285 / 0.08);
+  background: color-mix(in srgb, var(--raw-indigo) 8%, transparent);
   color: var(--raw-indigo);
   border-color: var(--raw-indigo);
 }
 
 .tag-cosmic {
-  background: oklch(0.68 0.14 285 / 0.08);
+  background: color-mix(in srgb, var(--raw-cosmic) 8%, transparent);
   color: var(--raw-cosmic);
   border-color: var(--raw-cosmic);
 }

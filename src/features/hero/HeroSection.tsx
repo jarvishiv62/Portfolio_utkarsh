@@ -101,7 +101,7 @@ export function HeroSection() {
             className="flex flex-wrap gap-3 mb-10"
           >
             <a
-              href="#projects"
+              href="/allprojects"
               className="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
               style={{
                 background:
@@ -110,7 +110,7 @@ export function HeroSection() {
                 fontFamily: "var(--font-display)",
               }}
             >
-              see what i&apos;ve built →
+              see what I&apos;ve built →
             </a>
             <a
               href="/UTKARSH_resume_L.pdf"

@@ -154,7 +154,7 @@ export function LearningSection() {
                 fontFamily: "var(--font-mono)",
               }}
             >
-              updated manually. last sync: jan 2026. no widget was harmed in the
+              updated manually. last sync: apr 2026. no widget was harmed in the
               making of this section.
             </p>
           </div>

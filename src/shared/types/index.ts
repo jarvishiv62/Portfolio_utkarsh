@@ -92,6 +92,7 @@ export interface Project {
   problem?: string; // problem statement for tech mode
   github?: string; // GitHub URL
   live?: string; // Live demo URL
+  videoUrl?: string; // Video demo URL
   // Enhanced fields for detail page
   build?: string; // detailed build process
   proudOf?: string; // what I'm proud of

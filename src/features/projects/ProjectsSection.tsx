@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getFeaturedProjects } from "@/data/projects";
 import { useApp } from "@/store/AppContext";
 import { CinemaReveal, CinemaChild } from "@/shared/components/ui/Reveal";
+import { VideoFrame } from "@/shared/components/ui/VideoFrame"; // ← new import
 
 const COLOR_MAP: Record<string, string> = {
   accent: "var(--raw-accent)",
@@ -159,6 +160,14 @@ export function ProjectsSection() {
                         height: 3,
                         background: `linear-gradient(90deg, ${accentColor}, transparent)`,
                       }}
+                    />
+
+                    {/* ── VIDEO FRAME ── */}
+                    <VideoFrame
+                      videoUrl={project.videoUrl}
+                      accentColor={accentColor}
+                      compact
+                      projectName={project.name}
                     />
 
                     <div style={{ padding: "1.75rem" }}>
