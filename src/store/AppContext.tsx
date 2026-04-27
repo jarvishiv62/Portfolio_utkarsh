@@ -72,7 +72,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   };
 
   const trackEvent = (event: string) => {
-    console.log("Tracking event:", event);
     // Placeholder for analytics
   };
 

@@ -31,13 +31,6 @@ export function CustomCursor() {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
       setVisible(true);
-      console.log(
-        "Cursor moved to:",
-        e.clientX,
-        e.clientY,
-        "visible:",
-        visible,
-      );
     };
     const down = () => setClicking(true);
     const up = () => setClicking(false);

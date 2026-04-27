@@ -129,7 +129,7 @@ export function ContactSection() {
 
               {/* resume download */}
               <a
-                href="/UTKARSH_resume_A.pdf"
+                href="/utkarsh_resume_A.pdf"
                 download
                 className="flex items-center justify-between p-5 transition-all duration-200"
                 style={{

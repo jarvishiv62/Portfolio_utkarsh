@@ -8,12 +8,6 @@ export function SimulationModal() {
   const { simulationState, closeSimulation, nextStep, prevStep, goToStep } =
     useApp();
 
-  console.log("SimulationModal rendering, isOpen:", simulationState.isOpen);
-  console.log(
-    "Cursor should be visible:",
-    simulationState.isOpen ? "YES" : "NO",
-  );
-
   if (!simulationState.projectSlug) return null;
 
   const simulation = SIMULATIONS[simulationState.projectSlug];

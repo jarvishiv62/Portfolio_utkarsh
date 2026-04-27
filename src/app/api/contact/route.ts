@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
   if (isRateLimited(ip)) {
     return NextResponse.json(
       { error: "max 3 messages per hour. email directly if urgent." },
-      { status: 429 }
+      { status: 429 },
     );
   }
 
@@ -54,13 +54,22 @@ export async function POST(req: NextRequest) {
     // validation
     const { name, email, message } = body;
     if (!name || name.length < 2) {
-      return NextResponse.json({ error: "name required (min 2 chars)" }, { status: 400 });
+      return NextResponse.json(
+        { error: "name required (min 2 chars)" },
+        { status: 400 },
+      );
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json({ error: "valid email required" }, { status: 400 });
+      return NextResponse.json(
+        { error: "valid email required" },
+        { status: 400 },
+      );
     }
     if (!message || message.length < 10 || message.length > 2000) {
-      return NextResponse.json({ error: "message required (10–2000 chars)" }, { status: 400 });
+      return NextResponse.json(
+        { error: "message required (10–2000 chars)" },
+        { status: 400 },
+      );
     }
 
     // --- RESEND SWAP POINT ---
@@ -76,7 +85,6 @@ export async function POST(req: NextRequest) {
 
     // for now: just validate and confirm
     // in prod: add Resend
-    console.log(`[contact] from=${email} name=${name} subject=${body.subject ?? "—"}`);
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch {
