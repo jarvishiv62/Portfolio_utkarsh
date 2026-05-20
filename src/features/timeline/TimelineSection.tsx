@@ -177,7 +177,7 @@ export function TimelineSection() {
           width: 400,
           height: 400,
           top: "30%",
-          right: "-5%",
+          right: "0%",
           background: "oklch(0.68 0.12 20 / 0.08)",
           pointerEvents: "none",
         }}
@@ -212,19 +212,7 @@ export function TimelineSection() {
         <div
           style={{ position: "relative", maxWidth: "48rem", margin: "0 auto" }}
         >
-          {/* Animated track */}
-          <div
-            className="tl-track-desktop"
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: 0,
-              bottom: 0,
-              width: 1,
-              background: "var(--border-subtle)",
-              transform: "translateX(-50%)",
-            }}
-          >
+          <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-(--border-subtle) -translate-x-1/2 tl-track-desktop">
             <motion.div
               style={{
                 position: "absolute",
@@ -239,45 +227,19 @@ export function TimelineSection() {
           </div>
 
           {/* Mobile track */}
-          <style>{`
-            @media(max-width:640px){
-              .tl-track-desktop{display:none!important}
-              .tl-track-mobile{display:block!important}
-              .timeline-item{
-                grid-template-columns:1fr!important;
-                text-align:center!important;
-                padding-left:3rem!important;
-                position:relative!important;
-              }
-              .timeline-item > div:first-child{
-                text-align:left!important;
-                padding:0!important;
-                grid-column:1!important;
-                opacity:1!important;
-              }
-              .timeline-item > div:last-child{
-                display:none!important;
-              }
-              .timeline-item > div:nth-child(2){
-                position:absolute!important;
-                left:1.5rem!important;
-                top:1.5rem!important;
-                transform:translateX(-50%)!important;
-              }
-            }
-          `}</style>
-          <div
-            className="tl-track-mobile"
-            style={{
-              display: "none",
-              position: "absolute",
-              left: "1.5rem",
-              top: 0,
-              bottom: 0,
-              width: 1,
-              background: "var(--border-subtle)",
-            }}
-          />
+          <div className="sm:hidden absolute left-6 top-0 bottom-0 w-px bg-(--border-subtle) tl-track-mobile">
+            <motion.div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                height: lineHeight,
+                background:
+                  "linear-gradient(to bottom, var(--accent), var(--gold), var(--accent))",
+              }}
+            />
+          </div>
 
           <div
             style={{ display: "flex", flexDirection: "column", gap: "3.5rem" }}
@@ -296,20 +258,12 @@ export function TimelineSection() {
                     ease: [0.25, 0.46, 0.45, 0.94],
                   }}
                   viewport={{ once: true, margin: "-80px" }}
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 3rem 1fr",
-                    alignItems: "start",
-                    gap: "0",
-                    position: "relative",
-                  }}
-                  className="timeline-item"
+                  className="timeline-item grid grid-cols-1 sm:grid-cols-[1fr_3rem_1fr] items-start gap-0 relative"
                 >
                   {/* Left content */}
                   <div
+                    className="pr-0 sm:pr-6 text-right sm:grid-col-1"
                     style={{
-                      padding: "0 1.5rem 0 0",
-                      textAlign: "right",
                       ...(ev.side === "right"
                         ? { gridColumn: "1", opacity: 0 }
                         : {}),
@@ -322,24 +276,12 @@ export function TimelineSection() {
                   </div>
 
                   {/* Center dot */}
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "flex-start",
-                      paddingTop: "1.5rem",
-                    }}
-                  >
+                  <div className="flex justify-center items-start pt-6 sm:pt-6">
                     <div
-                      className="cursor-pointer"
+                      className="cursor-pointer w-3 h-3 rounded-full border-2 border-(--bg) transition-transform duration-200"
                       style={{
-                        width: "12px",
-                        height: "12px",
-                        borderRadius: "50%",
                         background: ev.color,
-                        border: "2px solid var(--bg)",
                         boxShadow: `0 0 12px ${isGold ? "var(--gold-glow)" : "var(--accent-glow)"}`,
-                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
                       }}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget as HTMLDivElement;
@@ -356,8 +298,8 @@ export function TimelineSection() {
 
                   {/* Right content */}
                   <div
+                    className="pl-0 sm:pl-6 sm:grid-col-3"
                     style={{
-                      padding: "0 0 0 1.5rem",
                       ...(ev.side === "left"
                         ? { gridColumn: "3", opacity: 0 }
                         : {}),

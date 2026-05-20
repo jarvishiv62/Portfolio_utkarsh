@@ -70,6 +70,7 @@
 
   /* Responsive width: full-width on small screens, fixed on larger */
   width: min(420px, calc(100vw - 2rem));
+  width: min(420px, calc(100% - 2rem));
 
   /* Fixed height with internal scroll — never overflows viewport */
   height: min(560px, calc(100dvh - 7rem));
@@ -438,6 +439,7 @@
     bottom: 4.75rem;
     right: 1rem;
     width: calc(100vw - 2rem);
+    width: calc(100% - 2rem);
     height: min(520px, calc(100dvh - 6.5rem));
     border-radius: 16px;
   }

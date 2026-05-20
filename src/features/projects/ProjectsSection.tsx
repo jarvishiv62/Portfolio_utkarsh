@@ -30,7 +30,11 @@ export function ProjectsSection() {
   const projects = getFeaturedProjects();
 
   return (
-    <section id="work" className="section-pad" style={{ position: "relative" }}>
+    <section
+      id="work"
+      className="section-pad"
+      style={{ position: "relative", overflow: "hidden" }}
+    >
       <div
         className="nebula"
         style={{
@@ -43,7 +47,6 @@ export function ProjectsSection() {
           pointerEvents: "none",
         }}
       />
-
       <div className="container-portfolio">
         <CinemaReveal>
           <CinemaChild>
@@ -170,33 +173,16 @@ export function ProjectsSection() {
                       projectName={project.name}
                     />
 
-                    <div style={{ padding: "1.75rem" }}>
+                    <div className="p-4 sm:p-5 md:p-6 lg:p-7">
                       {/* Header row */}
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          alignItems: "flex-start",
-                          justifyContent: "space-between",
-                          gap: "1rem",
-                          marginBottom: "1rem",
-                        }}
-                      >
+                      <div className="flex flex-wrap items-start justify-between gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4">
                         <div>
-                          <div
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "0.75rem",
-                              marginBottom: "0.375rem",
-                            }}
-                          >
+                          <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
                             <h3
+                              className="text-xl sm:text-2xl md:text-[1.35rem] lg:text-2xl font-black"
                               style={{
                                 fontFamily:
                                   "var(--font-display), Syne, sans-serif",
-                                fontSize: "1.35rem",
-                                fontWeight: 800,
                                 color: "var(--raw-warm)",
                                 letterSpacing: "-0.01em",
                               }}
@@ -204,22 +190,19 @@ export function ProjectsSection() {
                               {project.name}
                             </h3>
                             <span
+                              className="text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-(--border-subtle)"
                               style={{
                                 fontFamily: "var(--font-mono), monospace",
-                                fontSize: "0.625rem",
                                 color: "var(--raw-muted)",
-                                border: "1px solid var(--border-subtle)",
-                                padding: "0.15rem 0.5rem",
-                                borderRadius: "9999px",
                               }}
                             >
                               {project.year}
                             </span>
                           </div>
                           <p
+                            className="text-xs sm:text-sm"
                             style={{
                               fontFamily: "var(--font-mono), monospace",
-                              fontSize: "0.75rem",
                               color: accentColor,
                               letterSpacing: "0.02em",
                             }}
@@ -229,27 +212,17 @@ export function ProjectsSection() {
                         </div>
 
                         {/* Action links */}
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: "0.625rem",
-                            flexShrink: 0,
-                          }}
-                        >
+                        <div className="flex gap-2 sm:gap-3 shrink-0">
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackEvent("clicked_github")}
+                            className="text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-(--border-subtle) transition-colors duration-200"
                             style={{
                               fontFamily: "var(--font-mono), monospace",
-                              fontSize: "0.6875rem",
                               color: "var(--raw-muted)",
                               textDecoration: "none",
-                              padding: "0.375rem 0.75rem",
-                              border: "1px solid var(--border-subtle)",
-                              borderRadius: "9999px",
-                              transition: "color 0.2s, border-color 0.2s",
                             }}
                             onMouseEnter={(e) => {
                               (e.currentTarget as HTMLElement).style.color =
@@ -273,14 +246,12 @@ export function ProjectsSection() {
                               href={project.live}
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border transition-colors duration-200"
                               style={{
                                 fontFamily: "var(--font-mono), monospace",
-                                fontSize: "0.6875rem",
                                 color: "var(--raw-cosmic)",
                                 textDecoration: "none",
-                                padding: "0.375rem 0.75rem",
-                                border: "1px solid oklch(0.80 0.15 195 / 0.3)",
-                                borderRadius: "9999px",
+                                borderColor: "oklch(0.80 0.15 195 / 0.3)",
                               }}
                             >
                               Live ↗
@@ -290,14 +261,7 @@ export function ProjectsSection() {
                       </div>
 
                       {/* Stack tags */}
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: "0.375rem",
-                          marginBottom: "1.25rem",
-                        }}
-                      >
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
                         {project.stack.map((s) => (
                           <span key={s} className={`tag ${tagClass}`}>
                             {s}
@@ -317,26 +281,20 @@ export function ProjectsSection() {
                           >
                             {/* Hook quote */}
                             <p
+                              className="text-base sm:text-lg italic leading-relaxed mb-3 sm:mb-4 pl-3 sm:pl-4 border-l-2"
                               style={{
                                 fontFamily:
                                   "var(--font-serif), Instrument Serif, serif",
-                                fontStyle: "italic",
-                                fontSize: "1rem",
                                 color: "var(--raw-warm)",
-                                lineHeight: 1.55,
-                                marginBottom: "0.75rem",
-                                borderLeft: `2px solid ${accentColor}`,
-                                paddingLeft: "0.875rem",
+                                borderColor: accentColor,
                               }}
                             >
                               &ldquo;{project.hook}&rdquo;
                             </p>
                             <p
+                              className="text-xs sm:text-sm font-semibold mb-3 sm:mb-4"
                               style={{
-                                fontSize: "0.8125rem",
                                 color: "var(--raw-muted)",
-                                fontWeight: 600,
-                                marginBottom: "0.75rem",
                               }}
                             >
                               {project.oneliner}
@@ -351,13 +309,9 @@ export function ProjectsSection() {
                               {project.impact?.slice(0, 2).map((item, idx) => (
                                 <li
                                   key={idx}
+                                  className="text-xs sm:text-sm pl-4 relative mb-1 leading-relaxed"
                                   style={{
-                                    fontSize: "0.8125rem",
                                     color: "var(--raw-muted)",
-                                    paddingLeft: "1rem",
-                                    position: "relative",
-                                    marginBottom: "0.25rem",
-                                    lineHeight: 1.5,
                                   }}
                                 >
                                   <span
@@ -382,19 +336,10 @@ export function ProjectsSection() {
                             exit={{ opacity: 0, y: -8 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <div
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "0.5rem",
-                                marginBottom: "0.75rem",
-                              }}
-                            >
+                            <div className="flex items-center gap-2 mb-3 sm:mb-4">
                               <span
+                                className="text-[10px] sm:text-xs tracking-widest uppercase"
                                 style={{
-                                  fontSize: "0.625rem",
-                                  letterSpacing: "0.12em",
-                                  textTransform: "uppercase",
                                   color: accentColor,
                                   fontFamily: "var(--font-mono), monospace",
                                 }}
@@ -403,11 +348,9 @@ export function ProjectsSection() {
                               </span>
                             </div>
                             <p
+                              className="text-xs sm:text-sm leading-relaxed mb-3.5 sm:mb-4"
                               style={{
-                                fontSize: "0.8125rem",
                                 color: "var(--raw-muted)",
-                                lineHeight: 1.65,
-                                marginBottom: "0.875rem",
                               }}
                             >
                               {project.problem?.split("\n")[0]}
@@ -422,13 +365,9 @@ export function ProjectsSection() {
                               {project.impact?.map((item, idx) => (
                                 <li
                                   key={idx}
+                                  className="text-xs sm:text-sm pl-4 relative mb-1.5 leading-relaxed"
                                   style={{
-                                    fontSize: "0.8125rem",
                                     color: "var(--raw-muted)",
-                                    paddingLeft: "1rem",
-                                    position: "relative",
-                                    marginBottom: "0.3rem",
-                                    lineHeight: 1.5,
                                   }}
                                 >
                                   <span
@@ -449,31 +388,15 @@ export function ProjectsSection() {
                       </AnimatePresence>
 
                       {/* Footer actions */}
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: "0.625rem",
-                          marginTop: "1.5rem",
-                          paddingTop: "1.25rem",
-                          borderTop: "1px solid var(--border-subtle)",
-                        }}
-                      >
+                      <div className="flex flex-wrap gap-2 sm:gap-3 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-(--border-subtle)">
                         <button
                           onClick={() => openSimulation(project.slug)}
+                          className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm cursor-pointer transition-colors duration-200"
                           style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.375rem",
-                            padding: "0.5rem 1rem",
-                            borderRadius: "9999px",
                             border: `1px solid ${accentColor}40`,
                             background: `${accentColor}0D`,
                             color: accentColor,
                             fontFamily: "var(--font-mono), monospace",
-                            fontSize: "0.75rem",
-                            cursor: "pointer",
-                            transition: "background 0.2s, border-color 0.2s",
                           }}
                           onMouseEnter={(e) => {
                             (e.currentTarget as HTMLElement).style.background =
@@ -489,20 +412,13 @@ export function ProjectsSection() {
                         <Link
                           href={`/projects/${project.slug}`}
                           onClick={() => trackEvent("viewed_project_detail")}
+                          className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm cursor-pointer transition-colors duration-200"
                           style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.375rem",
-                            padding: "0.5rem 1rem",
-                            borderRadius: "9999px",
                             border: "1px solid var(--border-subtle)",
                             background: "transparent",
                             color: "var(--raw-muted)",
                             fontFamily: "var(--font-mono), monospace",
-                            fontSize: "0.75rem",
-                            cursor: "pointer",
                             textDecoration: "none",
-                            transition: "color 0.2s, border-color 0.2s",
                           }}
                           onMouseEnter={(e) => {
                             (e.currentTarget as HTMLElement).style.color =
@@ -530,13 +446,10 @@ export function ProjectsSection() {
           {/* Footer */}
           <CinemaChild>
             <p
+              className="text-xs sm:text-sm mt-8 sm:mt-10 text-center leading-relaxed"
               style={{
                 fontFamily: "var(--font-mono), monospace",
-                fontSize: "0.75rem",
                 color: "var(--raw-muted)",
-                marginTop: "2.5rem",
-                textAlign: "center",
-                lineHeight: 1.7,
               }}
             >
               more projects incoming.

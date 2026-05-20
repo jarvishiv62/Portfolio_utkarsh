@@ -39,7 +39,7 @@ export function ContactSection() {
               >
                 <button
                   onClick={() => copy(SITE.email)}
-                  className="w-full p-5 text-left transition-all duration-200 group"
+                  className="w-full p-4 sm:p-5 text-left transition-all duration-200 group"
                   style={{
                     background: "var(--surface)",
                     border: "1px solid var(--border)",
@@ -96,7 +96,7 @@ export function ContactSection() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-5 transition-all duration-200"
+                  className="block p-4 sm:p-5 transition-all duration-200"
                   style={{
                     background: "var(--surface)",
                     border: `1px solid ${color === "gold" ? "var(--border-gold)" : "var(--border)"}`,
@@ -131,7 +131,7 @@ export function ContactSection() {
               <a
                 href="/utkarsh_resume_A.pdf"
                 download
-                className="flex items-center justify-between p-5 transition-all duration-200"
+                className="flex items-center justify-between p-4 sm:p-5 transition-all duration-200"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border-gold)",
@@ -172,7 +172,7 @@ export function ContactSection() {
 
               {/* availability note */}
               <div
-                className="p-4 flex items-center gap-3"
+                className="p-3 sm:p-4 flex items-center gap-3"
                 style={{
                   background: "var(--accent-dim)",
                   border: "1px solid var(--border)",
@@ -204,7 +204,7 @@ export function ContactSection() {
               </div>
 
               <div
-                className="p-6"
+                className="p-4 sm:p-5 md:p-6"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border)",

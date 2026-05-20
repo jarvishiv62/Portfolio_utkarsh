@@ -66,7 +66,7 @@ export function AboutSection() {
           {/* left — bio */}
           <FadeIn direction="left" delay={0.1}>
             <div
-              className="p-6 glow-border"
+              className="p-4 sm:p-5 md:p-6 glow-border"
               style={{ background: "var(--surface)" }}
             >
               {/* console comment block */}

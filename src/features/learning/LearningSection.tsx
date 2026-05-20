@@ -15,7 +15,7 @@ function LearningCard({ item, index }: { item: LearningItem; index: number }) {
     <FadeIn delay={index * 0.08}>
       <div
         ref={ref}
-        className="p-5"
+        className="p-4 sm:p-5"
         style={{
           background: "var(--surface)",
           border: `1px solid ${isActive ? "var(--border)" : "rgba(90,79,110,0.3)"}`,

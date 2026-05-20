@@ -29,7 +29,7 @@ export function TestimonialsSection() {
             return (
               <FadeIn key={t.name} delay={i * 0.1}>
                 <div
-                  className="p-6 h-full flex flex-col"
+                  className="p-4 sm:p-5 md:p-6 h-full flex flex-col"
                   style={{
                     background: "var(--surface)",
                     border: `1px solid ${isGold ? "var(--border-gold)" : "var(--border)"}`,

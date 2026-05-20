@@ -94,7 +94,11 @@
     transform: translateX(-50%);
   }
 }
-
+/* ─── MARQUEE FIX ────────────────────────────────────────────────── */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
 :root {
   /* Core palette */
   --raw-bg: #070719;
@@ -177,10 +181,12 @@
   box-sizing: border-box;
 }
 
+/* in globals.css, update your html rule */
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--accent) transparent;
+  overflow-x: hidden; /* ← ADD THIS */
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -261,6 +267,20 @@ body > * {
   :root {
     --section-px: 1.25rem;
     --section-py: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-px: 1rem;
+    --section-py: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-px: 0.875rem;
+    --section-py: 2.5rem;
   }
 }
 

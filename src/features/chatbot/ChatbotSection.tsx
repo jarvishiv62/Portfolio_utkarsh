@@ -19,7 +19,7 @@ const STARTERS = [
 const INITIAL_MESSAGE: Message = {
   role: "bot",
   content:
-    "Hey. I&apos;m UTKARSH&apos;s portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
+    "Hey. I'm UTKARSH's portfolio assistant — trained on his actual work, not vibes. Ask me anything.",
 };
 
 interface ChatbotSectionProps {
