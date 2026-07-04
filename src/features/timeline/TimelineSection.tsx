@@ -57,12 +57,12 @@ const EVENTS = [
   },
   {
     year: "2026",
-    type: "future",
-    title: "Graduating.",
-    org: "What's next?",
-    desc: "Final year. Looking for a full-stack role where problems are real, team ships, and &quot;production-ready&quot; is actual bar.",
-    tags: ["Available", "Full-Stack", "Open to roles"],
-    color: "var(--accent)",
+    type: "career",
+    title: "Building professionally.",
+    org: "Bizfoc Solutions — Software Developer",
+    desc: "Joined Bizfoc Solutions in June 2026 after graduating B.Tech. Now exploring a new and better opportunity where I can grow further and build larger impact.",
+    tags: ["Production", "Team Engineering", "Laravel", "Next.js"],
+    color: "var(--gold)",
     side: "left",
   },
 ];
@@ -260,9 +260,19 @@ export function TimelineSection() {
                   viewport={{ once: true, margin: "-80px" }}
                   className="timeline-item grid grid-cols-1 sm:grid-cols-[1fr_3rem_1fr] items-start gap-0 relative"
                 >
+                  <div className="block sm:hidden relative pl-8">
+                    <div
+                      className="absolute left-0 top-2 w-3 h-3 rounded-full border-2 border-(--bg)"
+                      style={{
+                        background: ev.color,
+                        boxShadow: `0 0 12px ${isGold ? "var(--gold-glow)" : "var(--accent-glow)"}`,
+                      }}
+                    />
+                    <TimelineCard ev={ev} />
+                  </div>
                   {/* Left content */}
                   <div
-                    className="pr-0 sm:pr-6 text-right sm:grid-col-1"
+                    className="hidden sm:block pr-0 sm:pr-6 text-right sm:col-start-1"
                     style={{
                       ...(ev.side === "right"
                         ? { gridColumn: "1", opacity: 0 }
@@ -276,7 +286,7 @@ export function TimelineSection() {
                   </div>
 
                   {/* Center dot */}
-                  <div className="flex justify-center items-start pt-6 sm:pt-6">
+                  <div className="hidden sm:flex justify-center items-start pt-6 sm:pt-6">
                     <div
                       className="cursor-pointer w-3 h-3 rounded-full border-2 border-(--bg) transition-transform duration-200"
                       style={{
@@ -298,7 +308,7 @@ export function TimelineSection() {
 
                   {/* Right content */}
                   <div
-                    className="pl-0 sm:pl-6 sm:grid-col-3"
+                    className="hidden sm:block pl-0 sm:pl-6 sm:col-start-3"
                     style={{
                       ...(ev.side === "left"
                         ? { gridColumn: "3", opacity: 0 }

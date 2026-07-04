@@ -42,7 +42,7 @@ export function HeroSection() {
                 animation: "pulse-soft 3s ease-in-out infinite",
               }}
             />
-            available for hire · graduating 2026
+            joined Bizfoc in June 2026
           </motion.div>
 
           {/* name */}
@@ -88,9 +88,10 @@ export function HeroSection() {
             className="text-base leading-relaxed mb-8 max-w-lg"
             style={{ color: "var(--text-muted)" }}
           >
-            b.tech IT @ REC Bijnor, &apos;26. two real internships — not
-            localhost projects. built things with real clients, real deadlines,
-            and a genuine fear of n+1 queries.
+            b.tech IT @ REC Bijnor. joined Bizfoc in June 2026 after graduating,
+            and I&apos;m now exploring a better next opportunity in software
+            development with a strong focus on Laravel, Next.js, and real-world
+            product delivery.
           </motion.p>
 
           {/* CTAs */}

@@ -12,7 +12,7 @@ const STARTERS = [
   "What is his strongest skill?",
   "Tell me about DailyDrive.",
   "Real client work?",
-  "Available for hire?",
+  "What is he building now?",
   "Laravel experience?",
 ];
 

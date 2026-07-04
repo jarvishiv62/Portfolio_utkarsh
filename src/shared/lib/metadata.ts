@@ -6,7 +6,7 @@ export const SITE = {
   name: "UTKARSH Maurya",
   title: "UTKARSH MAURYA — Full-Stack Developer",
   description:
-    "Full-stack developer specializing in Laravel + Next.js. Shipped real products at two internships. Cut API response times by 30%. Looking for the next thing to build.",
+    "Software developer who joined Bizfoc Solutions in June 2026 after graduating B.Tech and is now exploring new and better opportunities.",
   author: "UTKARSH Maurya",
   email: "virmauryauttu@gmail.com",
   github: "https://github.com/jarvishiv62",
@@ -51,6 +51,7 @@ export function pageMeta(opts?: {
       "Next.js developer",
       "backend developer",
       "REC Bijnor",
+      "Bizfoc Solutions",
       "Varanasi",
       "India",
       "web developer portfolio",

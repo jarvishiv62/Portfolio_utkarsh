@@ -23,8 +23,10 @@ export function ContactSection() {
             style={{ color: "var(--text-muted)" }}
           >
             {/* no spam, no newsletters, just a real reply. */}
-            open to full-time roles, internships, and freelance gigs. graduating
-            june 2026. remote-friendly. responds within 24hr.
+            joined Bizfoc in June 2026 after graduating B.Tech and I&apos;m
+            currently exploring a new and better opportunity in software
+            development. always happy to connect about thoughtful product work,
+            clean architecture, and meaningful collaboration.
           </p>
         </FadeIn>
 
@@ -158,7 +160,7 @@ export function ContactSection() {
                     className="text-xs"
                     style={{ color: "var(--text-faint)" }}
                   >
-                    PDF · updated apr 2026
+                    PDF · updated for current role
                   </div>
                 </div>
                 <span
@@ -187,9 +189,9 @@ export function ContactSection() {
                   }}
                 />
                 <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                  <span style={{ color: "var(--accent)" }}>available</span> for
-                  full-time roles after june 2026 graduation. also open to
-                  remote internships right now.
+                  <span style={{ color: "var(--accent)" }}>currently</span>{" "}
+                  working at Bizfoc Solutions and exploring new and better
+                  opportunities in product engineering.
                 </p>
               </div>
             </div>

@@ -241,22 +241,20 @@ export function ProjectsSection() {
                           >
                             GitHub ↗
                           </a>
-                          {project.live && (
-                            <a
-                              href={project.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border transition-colors duration-200"
-                              style={{
-                                fontFamily: "var(--font-mono), monospace",
-                                color: "var(--raw-cosmic)",
-                                textDecoration: "none",
-                                borderColor: "oklch(0.80 0.15 195 / 0.3)",
-                              }}
-                            >
-                              Live ↗
-                            </a>
-                          )}
+<a
+  href={project.live || "#"}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border transition-colors duration-200 live-button"
+  style={{
+    fontFamily: "var(--font-mono), monospace",
+    color: "var(--raw-rose)",
+    textDecoration: "none",
+    borderColor: "var(--raw-rose)",
+  }}
+>
+  Live ↗
+</a>
                         </div>
                       </div>
 

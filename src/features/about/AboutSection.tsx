@@ -79,10 +79,10 @@ export function AboutSection() {
               >
                 {`/**
  * @name     UTKARSH Maurya
+ * @role     Software Developer @ Bizfoc Solutions
  * @college  REC Bijnor — B.Tech IT
- * @grad     2026
  * @location Varanasi, UP, India
- * @status   open to work
+ * @status   joined Bizfoc in June 2026 · exploring better opportunities
  * @note     yes, the API really is 30% faster
  */`}
               </pre>
@@ -91,10 +91,11 @@ export function AboutSection() {
                 className="text-sm leading-relaxed mb-4"
                 style={{ color: "var(--text-muted)" }}
               >
-                i&apos;m a final-year CS student who builds things that actually
-                ship. two real on-site internships — not &quot;worked on a
-                startup idea with friends&quot;. actual clients, actual
-                deadlines, actual prod deployments.
+                i&apos;m a software developer who builds things that actually
+                ship. after joining Bizfoc in June 2026 and graduating B.Tech,
+                i&apos;m now looking for a better next step where i can grow
+                further and create bigger impact through dependable
+                architecture, clean APIs, and measurable results.
               </p>
               <p
                 className="text-sm leading-relaxed mb-4"

@@ -2,6 +2,7 @@
 // src/shared/components/layout/Navbar.tsx
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useActiveSection } from "@/shared/hooks/useActiveSection";
 import { NAV_LINKS } from "@/shared/lib/content";
@@ -11,6 +12,14 @@ import { cn } from "@/shared/lib/utils";
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const active = useActiveSection();
+  const pathname = usePathname();
+
+  const getNavHref = (href: string) => {
+    if (href.startsWith("#") && pathname !== "/") {
+      return `/${href}`;
+    }
+    return href;
+  };
 
   return (
     <>
@@ -41,18 +50,35 @@ export function Navbar() {
           <ul className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map(({ label, href }) => {
               const id = href.replace("#", "");
-              const isActive = active === id;
+              const isPageLink = href.startsWith("/");
+              const isAllProjectsLink = href === "/allprojects";
+              const isActivePage = isPageLink && pathname === href;
+              const isActiveSection =
+                !isPageLink && pathname === "/" && active === id;
+              const isActive =
+                isAllProjectsLink || isActivePage || isActiveSection;
+              const navHref = getNavHref(href);
+
               return (
                 <li key={href}>
                   <Link
-                    href={href}
+                    href={navHref}
                     className={cn(
-                      "relative px-3 py-1.5 text-sm font-mono transition-colors duration-200",
+                      "relative px-3 py-1.5 text-sm font-mono transition-colors duration-200 rounded-full",
                       "hover:text-[var(--accent)]",
+                      isActivePage && "border",
                     )}
                     style={{
                       color: isActive ? "var(--accent)" : "var(--text-muted)",
                       fontFamily: "var(--font-mono)",
+                      background:
+                        isActivePage || isAllProjectsLink
+                          ? "var(--accent-dim)"
+                          : "transparent",
+                      borderColor:
+                        isActivePage || isAllProjectsLink
+                          ? "var(--border)"
+                          : "transparent",
                     }}
                   >
                     {label}
@@ -79,7 +105,7 @@ export function Navbar() {
             <ThemeToggle />
             {/* hire me CTA */}
             <a
-              href="#contact"
+              href={getNavHref("#contact")}
               className="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-bold transition-all duration-200 hover:opacity-90"
               style={{
                 background:
@@ -146,25 +172,31 @@ export function Navbar() {
             }}
           >
             <ul className="flex flex-col p-6 gap-2">
-              {NAV_LINKS.map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    onClick={() => setOpen(false)}
-                    className="block py-3 px-4 text-base font-mono transition-colors"
-                    style={{
-                      color: "var(--text-muted)",
-                      borderBottom: "1px solid var(--border)",
-                      fontFamily: "var(--font-mono)",
-                    }}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.map(({ label, href }) => {
+                const navHref = getNavHref(href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={navHref}
+                      onClick={() => setOpen(false)}
+                      className="block py-3 px-4 text-base font-mono transition-colors"
+                      style={{
+                        color:
+                          pathname === href
+                            ? "var(--accent)"
+                            : "var(--text-muted)",
+                        borderBottom: "1px solid var(--border)",
+                        fontFamily: "var(--font-mono)",
+                      }}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
               <li className="pt-4 flex gap-3">
                 <a
-                  href="#contact"
+                  href={getNavHref("#contact")}
                   onClick={() => setOpen(false)}
                   className="flex-1 py-2.5 text-sm font-bold text-center"
                   style={{

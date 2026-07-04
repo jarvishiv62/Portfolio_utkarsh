@@ -3,19 +3,17 @@ import { SITE } from "@/shared/lib/metadata";
 import { NAV_LINKS } from "@/shared/lib/content";
 
 const MARQUEE_ITEMS = [
-  "laravel sorcerer",
+  "software developer",
   "·",
-  "next.js builder",
+  "laravel + next.js",
   "·",
-  "api optimizer",
+  "clean api builder",
   "·",
-  "30% faster",
+  "shipping with care",
   "·",
-  "ships on time",
+  "Bizfoc Solutions",
   "·",
-  "reads the docs",
-  "·",
-  "available 2026",
+  "real product work",
   "·",
   "Varanasi represent",
   "·",
@@ -72,9 +70,9 @@ export function Footer() {
             className="text-sm leading-relaxed"
             style={{ color: "var(--text-muted)" }}
           >
-            full-stack dev. laravel + next.js
+            software developer @ Bizfoc Solutions
             <br />
-            b.tech IT @ REC Bijnor, &apos;26.
+            laravel + next.js · b.tech IT @ REC Bijnor.
           </p>
           {/* available badge */}
           <div className="flex items-center gap-2 mt-3">
@@ -93,7 +91,7 @@ export function Footer() {
                 fontFamily: "var(--font-mono)",
               }}
             >
-              open to work
+              joined Bizfoc in June 2026
             </span>
           </div>
         </div>

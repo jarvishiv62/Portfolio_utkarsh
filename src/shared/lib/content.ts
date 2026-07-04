@@ -13,11 +13,10 @@ import type {
 export const SITE_NAME = "UTKARSH Maurya";
 
 export const TYPEWRITER_WORDS = [
-  "full-stack dev (allegedly) 🤙",
-  "cut API times by 30% ngl",
-  "shipped to prod. survived.",
-  "laravel sorcerer ⚡",
-  "seeking prod access 👀",
+  "software dev @ Bizfoc Solutions",
+  "shipping production features",
+  "laravel + next.js builder",
+  "clean APIs, real impact",
 ];
 
 export const NAV_LINKS = [
@@ -42,6 +41,22 @@ export const SKILLS: Skill[] = [
 ];
 
 export const EXPERIENCES: ExperienceBullet[] = [
+  {
+    role: "Software Developer",
+    company: "Bizfoc Solutions",
+    period: "Current",
+    type: "Full-time",
+    highlight: "shipping production-ready features",
+    description:
+      "joined Bizfoc Solutions in June 2026 after graduating B.Tech and is now exploring new and better opportunities while continuing to build strong technical foundations.",
+    bullets: [
+      "Developing and shipping features for real product workflows with a focus on maintainability and stability",
+      "Working across Laravel and Next.js codebases to build polished, scalable web experiences",
+      "Collaborating closely with teammates to turn requirements into dependable software",
+      "Improving API performance, reliability, and developer experience through thoughtful implementation",
+    ],
+    tags: ["Laravel", "Next.js", "REST API", "MySQL", "Product Delivery"],
+  },
   {
     role: "Software Developer Intern",
     company: "Dizi Global Solutions",
@@ -774,7 +789,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Dr. Anand Verma",
     role: "T&P Coordinator",
     company: "REC Bijnor",
-    text: "UTKARSH built a real product — not a tutorial clone — while managing coursework and two internships. He's the reason our placement cell started taking portfolio projects seriously. Industry-ready well before graduation.",
+    text: "UTKARSH built a real product — not a tutorial clone — while balancing coursework and professional experience. He brought a calm, reliable approach to delivery and made the work feel genuinely polished.",
     initials: "AV",
     accentColor: "purple",
   },
@@ -844,7 +859,7 @@ export const LEARNING_ITEMS: LearningItem[] = [
 export const CHATBOT_SUGGESTIONS = [
   "what's your strongest skill?",
   "tell me about DailyDrive",
-  "are you open to work?",
+  "what are you building now?",
   "any client experience?",
 ];
 
@@ -854,7 +869,7 @@ export const CHATBOT_RESPONSES: Record<string, string> = {
   skills:
     "strongest skill? laravel + REST API design, no contest. 92% proficiency (self-rated, but the 30% speed boost is receipted). also solid with next.js and growing fast.",
   experience:
-    "two real internships — innovilla (jun–sep 2025) and dizi global (oct 2025–jan 2026). both on-site, both with actual clients, both shipped on time. no localhost:3000 projects.",
+    "currently working as a software developer at Bizfoc Solutions, and before that I built client-facing work through Innovilla and Dizi Global. each experience taught me how to ship with real deadlines and real users.",
   projects:
     "main three: DailyDrive (AI-powered productivity suite), LaTeX Resume Optimizer (microservices AI platform), and VitalFlow (multi-tenant health SaaS). all production-ready with advanced features.",
   dailydrive:
@@ -864,7 +879,7 @@ export const CHATBOT_RESPONSES: Record<string, string> = {
   vitalflow:
     "VitalFlow is an AI-powered multi-tenant health SaaS platform with real-time collaboration, sentiment analysis, and automated workflows. Built for hackathon with enterprise-grade architecture.",
   api: "the 30% improvement came from query optimization — eliminating N+1s with eager loading and adding indexes on columns we actually filter by. also stopped doing SELECT * on wide tables. wild what that does.",
-  open: "yes, actively looking for a full-stack or backend role/internship. available june 2026 after graduation. open to remote too. if you're reading this, maybe it's fate 👀",
+  open: "currently working at Bizfoc Solutions and exploring new and better opportunities in software development. always happy to talk about thoughtful product work and strong engineering practices.",
   contact:
     "hit up virmauryauttu@gmail.com or use the contact form below. he responds within 24hr — usually faster because he checks email way too much.",
   laravel:
@@ -882,7 +897,7 @@ export const HERO_STATS: Array<{
   prefix?: string;
 }> = [
   { label: "projects shipped", value: 13, suffix: "+" },
-  { label: "internships survived", value: 2 },
+  { label: "client-facing roles", value: 3 },
   { label: "API speedup", value: 30, suffix: "%" },
 ];
 

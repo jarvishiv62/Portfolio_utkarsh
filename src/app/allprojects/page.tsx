@@ -294,24 +294,20 @@ export default function AllProjectsPage() {
                           >
                             GitHub ↗
                           </a>
-                          {project.live && (
-                            <a
-                              href={project.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{
-                                fontFamily: "var(--font-mono), monospace",
-                                fontSize: "0.6875rem",
-                                color: "var(--raw-cosmic)",
-                                textDecoration: "none",
-                                padding: "0.375rem 0.75rem",
-                                border: "1px solid oklch(0.80 0.15 195 / 0.3)",
-                                borderRadius: "9999px",
-                              }}
-                            >
-                              Live ↗
-                            </a>
-                          )}
+                          <a
+                            href={project.live || "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border transition-colors duration-200 live-button"
+                            style={{
+                              fontFamily: "var(--font-mono), monospace",
+                              color: "var(--raw-rose)",
+                              textDecoration: "none",
+                              borderColor: "var(--raw-rose)",
+                            }}
+                          >
+                            Live ↗
+                          </a>
                         </div>
                       </div>
 
